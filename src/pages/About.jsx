@@ -106,30 +106,29 @@ export default function About() {
             <div>
               <span className="section-label">Our Story</span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-dark mt-3 mb-6">
-                Born in Miami, Built for You
+                Rooted in the Pacific Northwest, Built for You
               </h2>
               <div className="space-y-4 text-eternita-gray text-sm md:text-base leading-relaxed">
                 <p>
                   Eternita was born from a simple observation: the med spa industry was full of hype but short on genuine, results-driven care. Our founders — a team of registered nurses and wellness practitioners — wanted to create something different: a place where advanced medical aesthetics meets authentic hospitality.
                 </p>
                 <p>
-                  We opened our doors in Miami with a clear mission: to offer transformative treatments in a space that feels more like a wellness retreat than a clinic. Every detail, from the warm terrazzo floors to the curated treatment menu, was designed with intentionality.
+                  We opened our doors in Lynnwood with a clear mission: to offer transformative treatments in a space that feels more like a wellness retreat than a clinic. Nestled near Alderwood Mall and serving the greater Seattle metro area, every detail from the warm finishes to the curated treatment menu was designed with intentionality.
                 </p>
                 <p>
-                  Today, Eternita is home to a team of over 20 licensed professionals, each committed to continuing education and mastering the latest techniques. We invest in the best technology, the finest products, and — most importantly — genuine relationships with every client who walks through our doors.
+                  Today, Eternita is home to a team of over 20 licensed professionals, each committed to continuing education and mastering the latest techniques. We invest in the best technology, the finest products, and — most importantly — genuine relationships with every client who walks through our doors in the Pacific Northwest.
                 </p>
                 <p>
                   Whether you are a first-time visitor or a longtime member, you are not just a client at Eternita. You are part of our family.
                 </p>
               </div>
             </div>
-            <div className="h-80 md:h-96 rounded-3xl bg-gradient-to-br from-eternita-teal-light via-eternita-teal to-eternita-teal-dark flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-white/20 mx-auto flex items-center justify-center mb-3">
-                  <span className="font-serif text-4xl font-bold text-white">E</span>
-                </div>
-                <p className="text-white/60 text-sm">Est. 2018</p>
-              </div>
+            <div className="h-80 md:h-96 rounded-3xl overflow-hidden">
+              <img
+                src="/images/about-story.jpg"
+                alt="Eternita story - Lynnwood, WA"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -180,7 +179,7 @@ export default function About() {
             <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.69 11 13.144 11 15c0 1.93-1.57 3.5-3.5 3.5-1.282 0-2.484-.685-2.917-1.179zm9.129 0C12.682 16.227 12.129 15 12.129 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C18.72 11.69 20.129 13.144 20.129 15c0 1.93-1.57 3.5-3.5 3.5-1.282 0-2.484-.685-2.917-1.179z" />
           </svg>
           <p className="font-serif text-xl md:text-2xl italic text-eternita-dark/80 leading-relaxed mb-6">
-            "We believe that beauty is not about changing who you are — it is about revealing the most radiant version of yourself. At Eternita, we combine science, art, and genuine care to help you glow from the inside out."
+            "We believe that beauty is about revealing the most radiant version of yourself — just like the natural splendor of the Pacific Northwest. At Eternita in Lynnwood, we combine science, art, and genuine care to help you glow from the inside out, rain or shine."
           </p>
           <p className="font-semibold text-eternita-dark">— The Eternita Team</p>
         </div>

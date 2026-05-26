@@ -189,7 +189,7 @@ export default function Checkout() {
                       value={form.phone}
                       onChange={handleFormChange}
                       className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal"
-                      placeholder="(305) 555-0199"
+                      placeholder="(425) 555-0199"
                     />
                   </div>
                 </div>

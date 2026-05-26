@@ -80,23 +80,23 @@ const featuredServices = [
 
 const testimonials = [
   {
-    name: 'Sophia Ramirez',
-    quote: 'I\'ve been to med spas across Miami and nothing compares to the care I received at Eternita. The HydraFacial MD transformed my skin after just one session — my complexion has never looked this radiant.',
+    name: 'Emma Thornton',
+    quote: 'I\'ve visited med spas across Seattle and nothing compares to the personalized care at Eternita in Lynnwood. The HydraFacial MD transformed my complexion after just one session — my skin has never looked this radiant, even through our rainy Pacific Northwest winters.',
     title: 'Loyal Client since 2023',
   },
   {
-    name: 'James Chen',
-    quote: 'The team at Eternita took the time to understand my concerns and designed a personalized plan that actually delivered. The results from PRP microneedling exceeded my expectations.',
+    name: 'Daniel Kwon',
+    quote: 'The team at Eternita took the time to understand my concerns and designed a personalized plan that actually delivered. Living in Lynnwood, I love that world-class medical aesthetics is right in my neighborhood — the results from PRP microneedling exceeded my expectations.',
     title: 'Wellness Advocate',
   },
   {
-    name: 'Olivia Martinez',
-    quote: 'From the moment I stepped through the doors, I felt like family. The studio is stunning, the staff is incredibly knowledgeable, and my skin has never looked better. Eternita is pure magic.',
+    name: 'Rachel O\'Brien',
+    quote: 'From the moment I stepped through the doors, I felt a sense of calm that\'s hard to find in the city. The studio is stunning, the staff is incredibly knowledgeable, and coming here from Seattle is always worth the drive. Eternita is pure magic.',
     title: 'Monthly Visitor',
   },
   {
-    name: 'Diana Park',
-    quote: 'After trying countless skincare routines, Eternita\'s medical-grade approach was the game-changer I needed. Their body contouring treatment gave me the confidence I\'ve been searching for.',
+    name: 'Priya Sharma',
+    quote: 'After trying countless skincare routines, Eternita\'s medical-grade approach was the game-changer I needed. Their body contouring treatment gave me the confidence I\'ve been searching for, and I love knowing this level of care is available right here in Lynnwood near Alderwood.',
     title: 'Transformational Journey',
   },
 ];
@@ -118,7 +118,7 @@ export default function Home() {
             <span className="text-eternita-coral-light">Radiance</span>
           </h1>
           <p className="text-eternita-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-in">
-            Where timeless beauty meets advanced medical science. Experience transformative care in a sanctuary designed for your wellness journey.
+            Where timeless beauty meets advanced medical science in the Pacific Northwest. Experience transformative care just minutes from Seattle in our Lynnwood sanctuary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Link to="/treatments" className="btn-primary bg-eternita-white text-eternita-teal hover:bg-eternita-coral-light hover:text-eternita-dark">
@@ -152,7 +152,7 @@ export default function Home() {
             <span className="section-label">Our Approach</span>
             <h2 className="section-heading mt-3">Why Eternita?</h2>
             <p className="text-eternita-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
-              We don't believe in one-size-fits-all. Every treatment is curated to your unique biology, goals, and timeline.
+              We don't believe in one-size-fits-all. Every treatment is curated to your unique biology, goals, and timeline — right here in our Lynnwood studio.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -227,16 +227,12 @@ export default function Home() {
           <div className="bg-gradient-to-br from-eternita-teal to-eternita-teal-dark rounded-3xl overflow-hidden">
             <div className="grid md:grid-cols-2">
               {/* Image side */}
-              <div className="h-64 md:h-auto bg-gradient-to-br from-eternita-teal-light to-eternita-coral flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-full bg-white/20 mx-auto flex items-center justify-center mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-white">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                    </svg>
-                  </div>
-                  <p className="text-white/70 text-sm">Miami, FL</p>
-                </div>
+              <div className="h-64 md:h-auto overflow-hidden">
+                <img
+                  src="/images/hero-studio.jpg"
+                  alt="Eternita studio in Lynnwood, WA"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Content side */}
               <div className="p-8 md:p-14 flex flex-col justify-center">
@@ -245,7 +241,7 @@ export default function Home() {
                   Experience Eternita in Person
                 </h2>
                 <p className="text-eternita-white/70 text-sm md:text-base leading-relaxed mb-6">
-                  Step into our tranquil studio in the heart of Miami. From the moment you arrive, every detail is designed to help you unwind, recharge, and transform.
+                  Step into our tranquil studio just minutes from Seattle in Lynnwood. From the moment you arrive, every detail is designed to help you unwind, recharge, and transform.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/contact" className="btn-primary bg-eternita-white text-eternita-teal hover:bg-eternita-coral-light hover:text-eternita-dark">
