@@ -142,7 +142,7 @@ export default function Packages() {
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {packages.map((pkg) => (
+            {packages.map((pkg, index) => (
               <div
                 key={pkg.id}
                 className={`bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover flex flex-col ${
@@ -157,8 +157,9 @@ export default function Packages() {
                   </div>
                 )}
                 {/* Image */}
-                <div className={`h-44 bg-gradient-to-br ${pkg.gradient} flex items-center justify-center relative`}>
-                  <span className="font-serif text-5xl font-bold text-white/30">{pkg.initials}</span>
+                <div className="h-44 overflow-hidden relative">
+                  <img src={`/images/service-${index + 1}.jpg`} alt={pkg.name} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   {pkg.badge && pkg.badge !== 'MOST POPULAR' && pkg.badge !== 'PREMIUM CHOICE' && (
                     <span className={`absolute top-4 left-4 ${pkg.badgeColor} text-eternita-dark text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase`}>
                       {pkg.badge}

@@ -153,11 +153,12 @@ export default function Treatments() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <div key={service.id} className="bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover flex flex-col">
                 {/* Image placeholder */}
-                <div className={`h-52 bg-gradient-to-br ${service.gradient} flex items-center justify-center relative`}>
-                  <span className="font-serif text-5xl font-bold text-white/30">{service.initials}</span>
+                <div className="h-52 overflow-hidden relative">
+                  <img src={`/images/service-${index + 1}.jpg`} alt={service.name} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-white font-medium">
                     {service.duration}
                   </div>
@@ -205,10 +206,11 @@ export default function Treatments() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {additionalServices.map((service) => (
+            {additionalServices.map((service, index) => (
               <div key={service.id} className="bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover">
-                <div className={`h-40 bg-gradient-to-br ${service.gradient} flex items-center justify-center`}>
-                  <span className="font-serif text-3xl font-bold text-white/40">{service.initials}</span>
+                <div className="h-40 overflow-hidden relative">
+                  <img src={`/images/service-${index + 7}.jpg`} alt={service.name} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
                 <div className="p-5">
                   <div className="flex justify-between items-start mb-2">

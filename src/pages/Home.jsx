@@ -180,11 +180,11 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service) => (
+            {featuredServices.map((service, index) => (
               <div key={service.id} className="card-hover bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30">
                 {/* Image placeholder */}
-                <div className={`h-48 bg-gradient-to-br ${service.gradient} flex items-center justify-center`}>
-                  <span className="font-serif text-4xl font-bold text-white/80">{service.initials}</span>
+                <div className="h-48 overflow-hidden">
+                  <img src={`/images/service-${index + 1}.jpg`} alt={service.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-serif text-lg font-bold text-eternita-dark">{service.name}</h3>
