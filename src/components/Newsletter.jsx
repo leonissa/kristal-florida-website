@@ -6,7 +6,7 @@ export default function Newsletter() {
           Stay Connected
         </h2>
         <p className="text-eternita-teal-light text-base md:text-lg max-w-xl mx-auto mb-8">
-          Be the first to know about exclusive treatments, seasonal offers, and wellness insights.
+          Be the first to know about exclusive treatments, seasonal offers, and wellness insights at Kristal's.
         </p>
         <form
           onSubmit={(e) => e.preventDefault()}

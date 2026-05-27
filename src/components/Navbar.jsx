@@ -22,9 +22,9 @@ export default function Navbar({ onCartOpen }) {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-9 h-9 rounded-lg bg-eternita-teal flex items-center justify-center">
-              <span className="font-serif font-bold text-eternita-white text-lg">E</span>
+              <span className="font-serif font-bold text-eternita-white text-lg">K</span>
             </div>
-            <span className="font-serif text-2xl font-bold text-eternita-teal tracking-tight">Eternita</span>
+            <span className="font-serif text-2xl font-bold text-eternita-teal tracking-tight">Kristal's</span>
           </Link>
 
           {/* Desktop nav */}
@@ -64,7 +64,7 @@ export default function Navbar({ onCartOpen }) {
             </button>
 
             {/* Book Now - desktop */}
-            <a href="tel:+15099863222" className="hidden md:inline-block btn-primary text-xs py-2.5 px-6">
+            <a href="tel:+17864745829" className="hidden md:inline-block btn-primary text-xs py-2.5 px-6">
               BOOK NOW
             </a>
 
@@ -104,7 +104,7 @@ export default function Navbar({ onCartOpen }) {
                 {link.label}
               </Link>
             ))}
-            <a href="tel:+15099863222" className="block text-center btn-primary text-xs py-2.5 px-6 mt-4">
+            <a href="tel:+17864745829" className="block text-center btn-primary text-xs py-2.5 px-6 mt-4">
               BOOK NOW
             </a>
           </div>

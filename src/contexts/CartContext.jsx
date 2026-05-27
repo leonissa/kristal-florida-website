@@ -5,7 +5,7 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [items, setItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('eternita-cart');
+      const saved = localStorage.getItem('kristals-cart');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -13,7 +13,7 @@ export function CartProvider({ children }) {
   });
 
   useEffect(() => {
-    localStorage.setItem('eternita-cart', JSON.stringify(items));
+    localStorage.setItem('kristals-cart', JSON.stringify(items));
   }, [items]);
 
   const addToCart = useCallback((item) => {

@@ -79,9 +79,9 @@ export default function Checkout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <Link to="/" className="flex items-center gap-2 w-fit">
             <div className="w-8 h-8 rounded-lg bg-eternita-teal flex items-center justify-center">
-              <span className="font-serif font-bold text-white text-sm">E</span>
+              <span className="font-serif font-bold text-white text-sm">K</span>
             </div>
-            <span className="font-serif text-xl font-bold text-eternita-teal">Eternita</span>
+            <span className="font-serif text-xl font-bold text-eternita-teal">Kristal's</span>
           </Link>
         </div>
       </div>
@@ -325,7 +325,7 @@ export default function Checkout() {
                   </svg>
                 </div>
                 <h2 className="font-serif text-2xl md:text-3xl font-bold text-eternita-dark mb-2">Order Confirmed!</h2>
-                <p className="text-eternita-gray text-sm mb-4">Thank you for choosing Eternita. Your wellness journey begins now.</p>
+                <p className="text-eternita-gray text-sm mb-4">Thank you for choosing Kristal's. Your wellness journey begins now.</p>
                 <div className="bg-eternita-light rounded-xl p-4 mb-6 inline-block">
                   <p className="text-xs text-eternita-gray mb-1">Order Number</p>
                   <p className="font-mono font-bold text-eternita-teal">{orderNumber}</p>

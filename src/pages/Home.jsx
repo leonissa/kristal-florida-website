@@ -80,23 +80,23 @@ const featuredServices = [
 
 const testimonials = [
   {
-    name: 'Emma Thornton',
-    quote: 'I\'ve visited med spas across Seattle and nothing compares to the personalized care at Eternita in Lynnwood. The HydraFacial MD transformed my complexion after just one session — my skin has never looked this radiant, even through our rainy Pacific Northwest winters.',
-    title: 'Loyal Client since 2023',
+    name: 'Sofia Ramirez',
+    quote: 'I\'ve visited med spas across South Florida and nothing compares to the personalized care at Kristal\'s in Davie. The HydraFacial MD transformed my complexion after just one session — my skin has never looked this radiant, even through Florida\'s humidity!',
+    title: 'Loyal Client since 2024',
   },
   {
-    name: 'Daniel Kwon',
-    quote: 'The team at Eternita took the time to understand my concerns and designed a personalized plan that actually delivered. Living in Lynnwood, I love that world-class medical aesthetics is right in my neighborhood — the results from PRP microneedling exceeded my expectations.',
+    name: 'Marcus Johnson',
+    quote: 'The team at Kristal\'s took the time to understand my concerns and designed a personalized plan that actually delivered. Living in Davie, I love that world-class medical aesthetics is right in my neighborhood — the results from PRP microneedling exceeded my expectations.',
     title: 'Wellness Advocate',
   },
   {
-    name: 'Rachel O\'Brien',
-    quote: 'From the moment I stepped through the doors, I felt a sense of calm that\'s hard to find in the city. The studio is stunning, the staff is incredibly knowledgeable, and coming here from Seattle is always worth the drive. Eternita is pure magic.',
+    name: 'Juliana Costa',
+    quote: 'From the moment I stepped through the doors, I felt a sense of calm that\'s hard to find in the city. The studio is stunning, the staff is incredibly knowledgeable, and coming here from Fort Lauderdale is always worth the drive. Kristal\'s is pure magic.',
     title: 'Monthly Visitor',
   },
   {
-    name: 'Priya Sharma',
-    quote: 'After trying countless skincare routines, Eternita\'s medical-grade approach was the game-changer I needed. Their body contouring treatment gave me the confidence I\'ve been searching for, and I love knowing this level of care is available right here in Lynnwood near Alderwood.',
+    name: 'David Park',
+    quote: 'After trying countless skincare routines, Kristal\'s medical-grade approach was the game-changer I needed. Their body contouring treatment gave me the confidence I\'ve been searching for, and I love knowing this level of care is available right here in Davie.',
     title: 'Transformational Journey',
   },
 ];
@@ -118,7 +118,7 @@ export default function Home() {
             <span className="text-eternita-coral-light">Radiance</span>
           </h1>
           <p className="text-eternita-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-in">
-            Where timeless beauty meets advanced medical science in the Pacific Northwest. Experience transformative care just minutes from Seattle in our Lynnwood sanctuary.
+            Where timeless beauty meets advanced medical science in the heart of South Florida. Experience transformative care at our Davie sanctuary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Link to="/treatments" className="btn-primary bg-eternita-white text-eternita-teal hover:bg-eternita-coral-light hover:text-eternita-dark">
@@ -150,9 +150,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="section-label">Our Approach</span>
-            <h2 className="section-heading mt-3">Why Eternita?</h2>
+            <h2 className="section-heading mt-3">Why Kristal's?</h2>
             <p className="text-eternita-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
-              We don't believe in one-size-fits-all. Every treatment is curated to your unique biology, goals, and timeline — right here in our Lynnwood studio.
+              We don't believe in one-size-fits-all. Every treatment is curated to your unique biology, goals, and timeline — right here in our Davie studio.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -229,8 +229,8 @@ export default function Home() {
               {/* Image side */}
               <div className="h-64 md:h-auto overflow-hidden">
                 <img
-                  src="/images/hero-studio.jpg"
-                  alt="Eternita studio in Lynnwood, WA"
+                  src="/images/about-story.jpg"
+                  alt="Kristal's studio in Davie, FL"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -238,16 +238,16 @@ export default function Home() {
               <div className="p-8 md:p-14 flex flex-col justify-center">
                 <span className="section-label text-eternita-coral-light">Visit Us</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-white mt-3 mb-4">
-                  Experience Eternita in Person
+                  Experience Kristal's in Person
                 </h2>
                 <p className="text-eternita-white/70 text-sm md:text-base leading-relaxed mb-6">
-                  Step into our tranquil studio just minutes from Seattle in Lynnwood. From the moment you arrive, every detail is designed to help you unwind, recharge, and transform.
+                  Step into our tranquil studio in the heart of Davie, just minutes from Fort Lauderdale. From the moment you arrive, every detail is designed to help you unwind, recharge, and transform.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/contact" className="btn-primary bg-eternita-white text-eternita-teal hover:bg-eternita-coral-light hover:text-eternita-dark">
                     Book Your Visit
                   </Link>
-                  <a href="tel:+15099863222" className="btn-secondary border-eternita-white text-eternita-white hover:bg-eternita-white hover:text-eternita-teal">
+                  <a href="tel:+17864745829" className="btn-secondary border-eternita-white text-eternita-white hover:bg-eternita-white hover:text-eternita-teal">
                     Call Us
                   </a>
                 </div>

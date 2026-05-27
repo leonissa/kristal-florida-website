@@ -137,7 +137,7 @@ export default function Treatments() {
             Advanced Aesthetics,<br />Timeless Results
           </h1>
           <p className="text-eternita-white/70 max-w-2xl mx-auto text-sm md:text-lg">
-            Every treatment at Eternita is powered by medical-grade technology, delivered by licensed professionals, and tailored to your unique needs.
+            Every treatment at Kristal's is powered by medical-grade technology, delivered by licensed professionals, and tailored to your unique needs.
           </p>
         </div>
       </section>
@@ -184,7 +184,7 @@ export default function Treatments() {
                     >
                       Add to Cart
                     </button>
-                    <a href="tel:+15099863222" className="flex-1 btn-primary text-xs py-2.5 text-center">
+                    <a href="tel:+17864745829" className="flex-1 btn-primary text-xs py-2.5 text-center">
                       Book Now
                     </a>
                   </div>
@@ -241,7 +241,7 @@ export default function Treatments() {
             Not Sure Where to Start?
           </h2>
           <p className="text-eternita-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
-            Schedule a complimentary consultation and our expert team will design a personalized treatment roadmap just for you.
+            Schedule a complimentary consultation and our expert team at Kristal's will design a personalized treatment roadmap just for you.
           </p>
           <Link to="/contact" className="btn-primary">
             Book a Free Consultation
