@@ -158,7 +158,7 @@ export default function Packages() {
                 )}
                 {/* Image */}
                 <div className="h-44 overflow-hidden relative">
-                  <img src={`/images/service-${index + 1}.jpg`} alt={pkg.name} className="w-full h-full object-cover" />
+                  <img src={`/images/package-${index + 1}.jpg`} alt={pkg.name} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   {pkg.badge && pkg.badge !== 'MOST POPULAR' && pkg.badge !== 'PREMIUM CHOICE' && (
                     <span className={`absolute top-4 left-4 ${pkg.badgeColor} text-eternita-dark text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase`}>
