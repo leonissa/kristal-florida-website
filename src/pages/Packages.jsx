@@ -10,12 +10,12 @@ const packages = [
     badgeColor: 'bg-eternita-teal-light',
     gradient: 'from-eternita-teal-light to-eternita-teal',
     initials: 'GS',
-    desc: 'The perfect introduction to medical-grade skincare. This curated bundle pairs our most beloved facial treatments to give your skin a fresh start and a luminous, even-toned foundation.',
+    desc: 'The perfect introduction to professional skincare. This curated bundle pairs our most beloved facial treatments to give your skin a fresh start and a luminous, even-toned foundation.',
     items: [
       '3 x HydraFacial MD sessions',
-      '1 x Signature Chemical Peel',
-      'Customized home-care regimen consultation',
-      'Complimentary skin analysis with AI imaging',
+      '1 x Classic Facial session',
+      'Customized home-care consultation',
+      'Complimentary skin analysis',
     ],
   },
   {
@@ -26,61 +26,12 @@ const packages = [
     badgeColor: 'bg-eternita-coral-light',
     gradient: 'from-eternita-coral-light to-eternita-coral',
     initials: 'RB',
-    desc: 'Triple-action brightening for dull, tired skin. Combining oxygen infusion, chemical exfoliation, and deep hydration, this package delivers a multi-dimensional glow that lasts.',
+    desc: 'Triple-action brightening for dull, tired skin. Combining oxygen infusion, deep hydration, and LED light therapy, this package delivers a multi-dimensional glow that lasts.',
     items: [
       '4 x Oxygen Facial sessions',
       '2 x Hydrating Facial sessions',
       '1 x LED Light Therapy booster',
       'Take-home vitamin C serum',
-    ],
-  },
-  {
-    id: 'body-sculpt',
-    name: 'Body Sculpt',
-    price: 1650,
-    badge: null,
-    badgeColor: '',
-    gradient: 'from-eternita-teal-dark to-eternita-teal',
-    initials: 'BS',
-    desc: 'Non-invasive body contouring designed to target stubborn fat and tighten loose skin. Perfect for post-pregnancy, post-weight-loss, or anyone seeking a more sculpted silhouette.',
-    items: [
-      '4 x Non-Surgical Body Contouring sessions',
-      '2 x Radiofrequency skin tightening add-ons',
-      'Personalized nutrition and lymphatic health guide',
-      'Progress photos with digital measurement tracking',
-    ],
-  },
-  {
-    id: 'ageless-revival',
-    name: 'Ageless Revival',
-    price: 1720,
-    badge: null,
-    badgeColor: '',
-    gradient: 'from-eternita-teal to-eternita-coral',
-    initials: 'AR',
-    desc: 'Collagen induction at its finest. This package combines microneedling with PRP and supportive LED therapy for dramatic improvements in texture, firmness, and overall skin youthfulness.',
-    items: [
-      '3 x Microneedling with PRP sessions',
-      '3 x LED Light Therapy recovery sessions',
-      'Medical-grade peptide serum (3-month supply)',
-      'Monthly progress consultation with clinical imaging',
-    ],
-  },
-  {
-    id: 'total-wellness',
-    name: 'Total Wellness',
-    price: 1800,
-    badge: 'MOST POPULAR',
-    badgeColor: 'bg-eternita-teal',
-    gradient: 'from-eternita-teal to-eternita-teal-dark',
-    initials: 'TW',
-    desc: 'Our comprehensive wellness package — the ultimate mind-body-skin experience. From IV therapy to advanced facial treatments, this is holistic rejuvenation at its most elevated.',
-    items: [
-      '4 x IV Vitamin Therapy sessions (your choice of drip)',
-      '2 x HydraFacial MD sessions',
-      '1 x Full-body LED Light Therapy session',
-      'Wellness assessment with registered nurse',
-      'Exclusive Kristal\u2019s wellness journal',
     ],
   },
   {
@@ -98,24 +49,6 @@ const packages = [
       'Priority booking — no waitlist, ever',
       'Exclusive 15% discount on retail products',
       'Complimentary welcome gift ($200 value)',
-    ],
-  },
-  {
-    id: 'diamond-membership',
-    name: 'Diamond Membership',
-    price: 2000,
-    badge: 'PREMIUM CHOICE',
-    badgeColor: 'bg-eternita-coral',
-    gradient: 'from-eternita-teal-dark to-eternita-coral',
-    initials: 'DM',
-    desc: 'The ultimate Kristal\u2019s experience. This monthly membership grants you unlimited access to select treatments, VIP perks, and a continuous, evolving wellness plan curated by our senior medical team.',
-    items: [
-      '2 treatments per month from our premium menu',
-      'Unlimited LED Light Therapy sessions',
-      'Monthly IV Vitamin Therapy drip',
-      'Quarterly advanced consultation with medical director',
-      'Complimentary guest pass for a friend each month',
-      '$200 monthly credit toward retail and add-on services',
     ],
   },
 ];
@@ -145,22 +78,13 @@ export default function Packages() {
             {packages.map((pkg, index) => (
               <div
                 key={pkg.id}
-                className={`bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover flex flex-col ${
-                  pkg.badge === 'MOST POPULAR' || pkg.badge === 'PREMIUM CHOICE' ? 'ring-2 ring-eternita-coral relative' : ''
-                }`}
+                className="bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover flex flex-col"
               >
-                {(pkg.badge === 'MOST POPULAR' || pkg.badge === 'PREMIUM CHOICE') && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                    <span className="bg-eternita-coral text-white text-[10px] font-bold px-4 py-1 rounded-full tracking-widest uppercase shadow-lg">
-                      {pkg.badge}
-                    </span>
-                  </div>
-                )}
                 {/* Image */}
                 <div className="h-44 overflow-hidden relative">
                   <img src={`/images/package-${index + 1}.jpg`} alt={pkg.name} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  {pkg.badge && pkg.badge !== 'MOST POPULAR' && pkg.badge !== 'PREMIUM CHOICE' && (
+                  {pkg.badge && (
                     <span className={`absolute top-4 left-4 ${pkg.badgeColor} text-eternita-dark text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase`}>
                       {pkg.badge}
                     </span>

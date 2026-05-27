@@ -9,8 +9,8 @@ const stats = [
 
 const values = [
   {
-    title: 'Medical Excellence',
-    desc: 'Every treatment at Kristal\'s is supervised by licensed medical professionals. We invest in the latest FDA-cleared technology and adhere to the highest clinical standards in the industry.',
+    title: 'Premium Quality',
+    desc: 'Every treatment at Kristal\'s uses professional-grade technology and high-quality products. We invest in the latest advanced technology and adhere to the highest standards in the industry.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     q: 'How much downtime should I expect?',
-    a: 'Most of our treatments are designed with minimal to zero downtime. HydraFacial MD, LED therapy, and IV vitamin therapy have no recovery period. Microneedling and chemical peels may involve mild redness for 24\u201348 hours. We always provide detailed aftercare instructions.',
+    a: 'Most of our treatments are designed with minimal to zero downtime. HydraFacial MD, LED therapy, and our classic facials have no recovery period. Oxygen facials and peels may involve mild redness for 24\u201348 hours. We always provide detailed aftercare instructions.',
   },
   {
     q: 'Do you offer payment plans or financing?',
@@ -65,19 +65,19 @@ const faqs = [
   },
   {
     q: 'How many sessions will I need to see results?',
-    a: 'Many treatments deliver visible results after a single session \u2014 especially HydraFacial MD and chemical peels. For collagen-stimulating treatments like microneedling, optimal results are typically achieved after 3 sessions spaced 4 weeks apart. Your provider will outline a personalized plan during your consultation.',
+    a: 'Many treatments deliver visible results after a single session \u2014 especially HydraFacial MD and oxygen facials. For deeper skin renewal, optimal results are typically achieved after 3 sessions spaced 4 weeks apart. Your provider will outline a personalized plan during your consultation.',
   },
   {
     q: 'Can I combine multiple treatments in one visit?',
-    a: 'Yes. Many of our guests combine treatments for enhanced results. Popular pairings include HydraFacial MD with LED therapy, or microneedling with PRP. We call these "stacked sessions" and they are a great way to maximize your time and results.',
+    a: 'Yes. Many of our guests combine treatments for enhanced results. Popular pairings include HydraFacial MD with LED therapy, or an oxygen facial with a hydrating boost. We call these "stacked sessions" and they are a great way to maximize your time and results.',
   },
   {
     q: 'What is the difference between a medical spa and a regular spa?',
-    a: 'Unlike traditional day spas, a medical spa operates under the supervision of licensed medical professionals and offers clinical-grade treatments that go beyond the surface. At Kristal\'s, every treatment is performed or overseen by registered nurses and nurse practitioners using advanced medical technology.',
+    a: 'Unlike traditional day spas, a medical spa operates under the supervision of licensed professionals and offers advanced-grade treatments that go beyond the surface. At Kristal\'s, every treatment is performed or overseen by experienced estheticians and wellness practitioners using premium technology.',
   },
   {
     q: 'Do you treat men as well?',
-    a: 'Absolutely. Skincare is for everyone. We have a growing number of male clients who appreciate our results-driven, no-fuss approach. Popular men\'s treatments include HydraFacial MD, IV vitamin therapy, and body contouring.',
+    a: 'Absolutely. Skincare is for everyone. We have a growing number of male clients who appreciate our results-driven, no-fuss approach. Popular men\'s treatments include HydraFacial MD, oxygen facials, and LED light therapy.',
   },
 ];
 
@@ -94,7 +94,7 @@ export default function About() {
             Elevated Wellness,<br />Expertly Delivered
           </h1>
           <p className="text-eternita-white/70 max-w-2xl mx-auto text-sm md:text-lg">
-            Kristal's was founded with one belief — that everyone deserves access to medical-grade skincare in an environment that feels like a sanctuary.
+            Kristal's was founded with one belief — that everyone deserves access to professional skincare in an environment that feels like a sanctuary.
           </p>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-eternita-gray text-sm md:text-base leading-relaxed">
                 <p>
-                  Kristal's was born from a simple observation: the med spa industry was full of hype but short on genuine, results-driven care. Our founders — a team of registered nurses and wellness practitioners — wanted to create something different: a place where advanced medical aesthetics meets authentic hospitality.
+                  Kristal's was born from a simple observation: the med spa industry was full of hype but short on genuine, results-driven care. Our founders — a team of experienced estheticians and wellness practitioners — wanted to create something different: a place where advanced skincare meets authentic hospitality.
                 </p>
                 <p>
                   We opened our doors in Davie with a clear mission: to offer transformative treatments in a space that feels more like a wellness retreat than a clinic. Nestled in the heart of Broward County and serving the greater Fort Lauderdale metro area, every detail from the warm finishes to the curated treatment menu was designed with intentionality.

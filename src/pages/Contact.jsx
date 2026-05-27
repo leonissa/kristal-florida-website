@@ -173,9 +173,9 @@ export default function Contact() {
                 <ul className="space-y-4">
                   {[
                     'Complimentary consultations for all new guests',
-                    'Licensed medical professionals on every shift',
+                    'Professional estheticians on every shift',
                     'Customized treatment plans, not cookie-cutter menus',
-                    'State-of-the-art FDA-cleared technology',
+                    'Professional-grade technology and premium products',
                     'A serene, spa-like environment in the heart of Davie',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm">

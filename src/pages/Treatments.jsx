@@ -9,109 +9,13 @@ const services = [
     duration: '50 min',
     gradient: 'from-eternita-teal to-eternita-teal-dark',
     initials: 'HF',
-    desc: 'The gold standard in medical-grade facial rejuvenation. Our HydraFacial MD combines vortex-cleaning, painless extractions, and intense hydration to deliver instant, visible results with zero downtime.',
+    desc: 'Experience the gold standard in facial rejuvenation. Our HydraFacial combines vortex-cleaning, gentle extractions, and intense hydration to deliver instant, visible results with zero downtime.',
     bullets: [
       'Deep pore cleansing and extraction',
       'Customizable serum infusion (antioxidants, peptides, hyaluronic acid)',
       'LED boost treatment optional add-on',
       'Instant glow with no irritation',
     ],
-  },
-  {
-    id: 'microneedling',
-    name: 'Microneedling with PRP',
-    price: 399,
-    duration: '60 min',
-    gradient: 'from-eternita-coral to-eternita-teal-dark',
-    initials: 'MP',
-    desc: 'Harness your body\'s natural healing power. Microneedling creates micro-channels that stimulate collagen production, while platelet-rich plasma (PRP) accelerates tissue regeneration for dramatic skin renewal.',
-    bullets: [
-      'Collagen induction therapy with medical-grade pen',
-      'Autologous PRP harvested from your blood',
-      'Reduces fine lines, scars, and pore size',
-      'Optimal results in 3 sessions, 4 weeks apart',
-    ],
-  },
-  {
-    id: 'chemical-peel',
-    name: 'Signature Chemical Peel',
-    price: 179,
-    duration: '45 min',
-    gradient: 'from-eternita-teal-light to-eternita-teal',
-    initials: 'CP',
-    desc: 'Reveal fresher, younger skin beneath. Our medical-strength chemical peels are formulated to exfoliate damaged outer layers, stimulate cellular turnover, and correct uneven tone and texture.',
-    bullets: [
-      'Available in light, medium, and deep formulations',
-      'Corrects hyperpigmentation and sun damage',
-      'Smooths fine lines and acne scars',
-      'Pre-treatment consultation included',
-    ],
-  },
-  {
-    id: 'iv-therapy',
-    name: 'IV Vitamin Therapy',
-    price: 149,
-    duration: '30 min',
-    gradient: 'from-eternita-coral-light to-eternita-coral',
-    initials: 'IV',
-    desc: 'Replenish and revitalize from within. Our customized IV drips deliver high-concentration vitamins, minerals, and antioxidants directly into your bloodstream for rapid absorption and immediate benefits.',
-    bullets: [
-      'Myers Cocktail, Immunity Boost, Beauty Drip options',
-      '100% absorption — bypasses digestive system',
-      'Boosts energy, immunity, and skin radiance',
-      'Perfect for pre-event glow or post-travel recovery',
-    ],
-  },
-  {
-    id: 'body-contouring',
-    name: 'Non-Surgical Body Contouring',
-    price: 349,
-    duration: '60 min',
-    gradient: 'from-eternita-teal to-eternita-teal-light',
-    initials: 'BC',
-    desc: 'Sculpt your silhouette without surgery or downtime. Using advanced cryolipolysis and radiofrequency technology, we target stubborn fat pockets and tighten skin for a smoother, more contoured physique.',
-    bullets: [
-      'FDA-cleared cooling and RF technology',
-      'Treats abdomen, thighs, arms, and flanks',
-      'No incisions, no anesthesia, no recovery',
-      'Visible results in 4–6 weeks',
-    ],
-  },
-  {
-    id: 'led-therapy',
-    name: 'LED Light Therapy',
-    price: 129,
-    duration: '40 min',
-    gradient: 'from-eternita-teal-dark to-eternita-coral',
-    initials: 'LL',
-    desc: 'Harness the power of therapeutic light wavelengths. Our medical-grade LED panels deliver precise red and blue light to combat acne, reduce inflammation, and stimulate collagen at the cellular level.',
-    bullets: [
-      'Red light: collagen stimulation, anti-aging',
-      'Blue light: acne-causing bacteria elimination',
-      'Painless, relaxing, and non-invasive',
-      'Often paired with facials for amplified results',
-    ],
-  },
-];
-
-const additionalServices = [
-  {
-    id: 'dermaplaning',
-    name: 'Dermaplaning',
-    price: 99,
-    duration: '30 min',
-    gradient: 'from-eternita-taupe to-eternita-teal-light',
-    initials: 'DP',
-    desc: 'Achieve instantly smoother skin with this gentle exfoliation treatment that removes dead skin cells and fine vellus hair for a luminous, polished complexion.',
-  },
-  {
-    id: 'hydrating-facial',
-    name: 'Hydrating Facial',
-    price: 139,
-    duration: '45 min',
-    gradient: 'from-eternita-teal-light to-eternita-coral-light',
-    initials: 'HF',
-    desc: 'An ultra-nourishing facial designed for dehydrated and dull skin. Layers of hyaluronic acid, ceramides, and botanical extracts restore moisture balance and leave skin plump and dewy.',
   },
   {
     id: 'oxygen-facial',
@@ -121,6 +25,72 @@ const additionalServices = [
     gradient: 'from-eternita-coral to-eternita-coral-light',
     initials: 'OF',
     desc: 'Infuse your skin with pure oxygen and concentrated active ingredients. This painless, refreshing treatment boosts circulation, reduces puffiness, and delivers an instant "glass skin" glow.',
+    bullets: [
+      'Pure oxygen infusion with active serums',
+      'Brightens dull, tired complexions',
+      'Reduces puffiness and boosts circulation',
+      'Instant glow — perfect before an event',
+    ],
+  },
+  {
+    id: 'hydrating-facial',
+    name: 'Hydrating Facial',
+    price: 139,
+    duration: '45 min',
+    gradient: 'from-eternita-teal-light to-eternita-coral-light',
+    initials: 'HF',
+    desc: 'An ultra-nourishing facial designed for dehydrated and dull skin. Layers of hyaluronic acid, ceramides, and botanical extracts restore moisture balance and leave skin plump and dewy.',
+    bullets: [
+      'Deep hydration with hyaluronic acid and ceramides',
+      'Soothes dry, dehydrated, or sensitive skin',
+      'Restores moisture barrier',
+      'Reveals a plump, dewy complexion',
+    ],
+  },
+  {
+    id: 'classic-facial',
+    name: 'Classic Facial',
+    price: 129,
+    duration: '50 min',
+    gradient: 'from-eternita-teal to-eternita-teal-light',
+    initials: 'CF',
+    desc: 'Our foundational facial experience. A thorough cleanse, gentle exfoliation, pore extraction, and customized mask — everything your skin needs to feel refreshed, balanced, and radiant.',
+    bullets: [
+      'Thorough double-cleansing and steam',
+      'Gentle exfoliation and pore extraction',
+      'Customized mask for your skin type',
+      'Finishing with tone, serum, and moisturizer',
+    ],
+  },
+  {
+    id: 'led-therapy',
+    name: 'LED Light Therapy',
+    price: 129,
+    duration: '40 min',
+    gradient: 'from-eternita-teal-dark to-eternita-coral',
+    initials: 'LL',
+    desc: 'Harness the power of therapeutic light wavelengths. Our LED panels deliver precise red and blue light to calm inflammation, target blemishes, and support natural collagen production.',
+    bullets: [
+      'Red light: supports collagen and soothing',
+      'Blue light: helps calm blemishes',
+      'Painless, relaxing, and non-invasive',
+      'Often paired with facials for amplified results',
+    ],
+  },
+  {
+    id: 'dermaplaning',
+    name: 'Dermaplaning',
+    price: 99,
+    duration: '30 min',
+    gradient: 'from-eternita-taupe to-eternita-teal-light',
+    initials: 'DP',
+    desc: 'Achieve instantly smoother skin with this gentle exfoliation treatment that removes dead skin cells and fine vellus hair for a luminous, polished complexion.',
+    bullets: [
+      'Gentle exfoliation of dead skin cells',
+      'Removes fine vellus hair (peach fuzz)',
+      'Creates a smooth canvas for makeup',
+      'Reveals a luminous, polished complexion',
+    ],
   },
 ];
 
@@ -134,22 +104,22 @@ export default function Treatments() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-label text-eternita-coral-light">Treatments</span>
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-eternita-white mt-3 mb-4">
-            Advanced Aesthetics,<br />Timeless Results
+            Curated Facials,<br />Beautiful Results
           </h1>
           <p className="text-eternita-white/70 max-w-2xl mx-auto text-sm md:text-lg">
-            Every treatment at Kristal's is powered by medical-grade technology, delivered by licensed professionals, and tailored to your unique needs.
+            Every treatment at Kristal's is tailored to your unique skin needs and delivered in a relaxing, welcoming environment.
           </p>
         </div>
       </section>
 
-      {/* Signature Services */}
+      {/* Services Grid */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="section-label">Signature Services</span>
-            <h2 className="section-heading mt-3">Our Most Requested Treatments</h2>
+            <span className="section-label">Our Services</span>
+            <h2 className="section-heading mt-3">Facial Services</h2>
             <p className="text-eternita-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
-              The treatments our clients return for again and again — each one backed by clinical evidence and exceptional results.
+              Each treatment is designed to restore, rejuvenate, and reveal your best skin.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -195,53 +165,14 @@ export default function Treatments() {
         </div>
       </section>
 
-      {/* Also Available */}
-      <section className="py-20 md:py-28 bg-eternita-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="section-label">Also Available</span>
-            <h2 className="section-heading mt-3">More Ways to Glow</h2>
-            <p className="text-eternita-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
-              In addition to our signature menu, we offer these popular treatments for targeted results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {additionalServices.map((service, index) => (
-              <div key={service.id} className="bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover">
-                <div className="h-40 overflow-hidden relative">
-                  <img src={`/images/service-${index + 7}.jpg`} alt={service.name} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                </div>
-                <div className="p-5">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-serif text-lg font-bold text-eternita-dark">{service.name}</h3>
-                    <span className="text-eternita-gray text-xs">{service.duration}</span>
-                  </div>
-                  <p className="text-eternita-gray text-xs leading-relaxed">{service.desc}</p>
-                  <div className="flex items-center justify-between mt-4">
-                    <span className="text-eternita-teal text-xl font-bold">${service.price}</span>
-                    <button
-                      onClick={() => addToCart({ id: service.id, name: service.name, price: service.price, duration: service.duration, image: `/images/service-${index + 7}.jpg` })}
-                      className="py-2 px-5 rounded-full border border-eternita-teal text-eternita-teal text-xs font-medium hover:bg-eternita-teal hover:text-white transition-all"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Bottom CTA */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-eternita-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-dark mb-4">
             Not Sure Where to Start?
           </h2>
           <p className="text-eternita-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
-            Schedule a complimentary consultation and our expert team at Kristal's will design a personalized treatment roadmap just for you.
+            Schedule a complimentary consultation and our team at Kristal's will help find the perfect facial for your skin.
           </p>
           <Link to="/contact" className="btn-primary">
             Book a Free Consultation
