@@ -64,7 +64,7 @@ export default function Navbar({ onCartOpen }) {
             </button>
 
             {/* Book Now - desktop */}
-            <a href="tel:+1234567890" className="hidden md:inline-block btn-primary text-xs py-2.5 px-6">
+            <a href="tel:+15099863222" className="hidden md:inline-block btn-primary text-xs py-2.5 px-6">
               BOOK NOW
             </a>
 
@@ -104,7 +104,7 @@ export default function Navbar({ onCartOpen }) {
                 {link.label}
               </Link>
             ))}
-            <a href="tel:+1234567890" className="block text-center btn-primary text-xs py-2.5 px-6 mt-4">
+            <a href="tel:+15099863222" className="block text-center btn-primary text-xs py-2.5 px-6 mt-4">
               BOOK NOW
             </a>
           </div>

@@ -247,7 +247,7 @@ export default function Home() {
                   <Link to="/contact" className="btn-primary bg-eternita-white text-eternita-teal hover:bg-eternita-coral-light hover:text-eternita-dark">
                     Book Your Visit
                   </Link>
-                  <a href="tel:+1234567890" className="btn-secondary border-eternita-white text-eternita-white hover:bg-eternita-white hover:text-eternita-teal">
+                  <a href="tel:+15099863222" className="btn-secondary border-eternita-white text-eternita-white hover:bg-eternita-white hover:text-eternita-teal">
                     Call Us
                   </a>
                 </div>

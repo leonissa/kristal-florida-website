@@ -195,7 +195,7 @@ export default function Packages() {
                       >
                         Add to Cart
                       </button>
-                      <a href="tel:+1234567890" className="flex-1 btn-primary text-xs py-2.5 text-center">
+                      <a href="tel:+15099863222" className="flex-1 btn-primary text-xs py-2.5 text-center">
                         Book Now
                       </a>
                     </div>
