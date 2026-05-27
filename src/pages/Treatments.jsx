@@ -179,7 +179,7 @@ export default function Treatments() {
                   </ul>
                   <div className="mt-6 flex gap-3">
                     <button
-                      onClick={() => addToCart({ id: service.id, name: service.name, price: service.price, duration: service.duration })}
+                      onClick={() => addToCart({ id: service.id, name: service.name, price: service.price, duration: service.duration, image: `/images/service-${index + 1}.jpg` })}
                       className="flex-1 py-2.5 rounded-full border border-eternita-teal text-eternita-teal text-sm font-medium hover:bg-eternita-teal hover:text-white transition-all"
                     >
                       Add to Cart
@@ -221,7 +221,7 @@ export default function Treatments() {
                   <div className="flex items-center justify-between mt-4">
                     <span className="text-eternita-teal text-xl font-bold">${service.price}</span>
                     <button
-                      onClick={() => addToCart({ id: service.id, name: service.name, price: service.price, duration: service.duration })}
+                      onClick={() => addToCart({ id: service.id, name: service.name, price: service.price, duration: service.duration, image: `/images/service-${index + 7}.jpg` })}
                       className="py-2 px-5 rounded-full border border-eternita-teal text-eternita-teal text-xs font-medium hover:bg-eternita-teal hover:text-white transition-all"
                     >
                       Add to Cart

@@ -190,7 +190,7 @@ export default function Home() {
                   <h3 className="font-serif text-lg font-bold text-eternita-dark">{service.name}</h3>
                   <p className="text-eternita-teal text-xl font-bold mt-1">${service.price}</p>
                   <button
-                    onClick={() => addToCart({ id: service.id, name: service.name, price: service.price })}
+                    onClick={() => addToCart({ id: service.id, name: service.name, price: service.price, image: `/images/service-${index + 1}.jpg` })}
                     className="mt-4 w-full py-2.5 rounded-full border border-eternita-teal text-eternita-teal text-sm font-medium hover:bg-eternita-teal hover:text-white transition-all"
                   >
                     Add to Cart

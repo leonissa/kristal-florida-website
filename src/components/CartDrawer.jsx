@@ -53,9 +53,17 @@ export default function CartDrawer({ open, onClose }) {
                 {items.map((item) => (
                   <li key={item.id} className="flex gap-4 p-3 rounded-lg bg-eternita-white border border-eternita-taupe/40">
                     {/* Image placeholder */}
-                    <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-eternita-teal to-eternita-teal-dark flex items-center justify-center shrink-0">
-                      <span className="font-serif font-bold text-white text-sm">{item.name.charAt(0)}</span>
-                    </div>
+                    {(item.image || item.initials) ? (
+                      <img
+                        src={item.image || `/images/service-${item.serviceIndex || 1}.jpg`}
+                        alt={item.name}
+                        className="w-16 h-16 rounded-lg object-cover shrink-0"
+                      />
+                    ) : (
+                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-eternita-teal to-eternita-teal-dark flex items-center justify-center shrink-0">
+                        <span className="font-serif font-bold text-white text-sm">{item.name.charAt(0)}</span>
+                      </div>
+                    )}
                     {/* Info */}
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-sm text-eternita-dark truncate">{item.name}</p>

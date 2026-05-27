@@ -190,7 +190,7 @@ export default function Packages() {
                     </div>
                     <div className="flex gap-3">
                       <button
-                        onClick={() => addToCart({ id: pkg.id, name: pkg.name, price: pkg.price })}
+                        onClick={() => addToCart({ id: pkg.id, name: pkg.name, price: pkg.price, image: `/images/package-${index + 1}.jpg` })}
                         className="flex-1 py-2.5 rounded-full border border-eternita-teal text-eternita-teal text-sm font-medium hover:bg-eternita-teal hover:text-white transition-all"
                       >
                         Add to Cart

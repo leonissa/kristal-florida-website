@@ -8,13 +8,6 @@ const steps = [
   { id: 3, label: 'Confirmation' },
 ];
 
-const cardBrands = [
-  { value: 'visa', label: 'Visa' },
-  { value: 'mastercard', label: 'Mastercard' },
-  { value: 'amex', label: 'American Express' },
-  { value: 'discover', label: 'Discover' },
-];
-
 export default function Checkout() {
   const { items, totalPrice, cartCount, clearCart } = useCart();
   const [step, setStep] = useState(1);
@@ -26,11 +19,10 @@ export default function Checkout() {
     notes: '',
   });
   const [payment, setPayment] = useState({
-    cardNumber: '**** **** **** ****',
+    cardNumber: '',
     cardName: '',
     expiry: '',
     cvv: '',
-    brand: 'visa',
   });
   const [confirmed, setConfirmed] = useState(false);
   const [orderNumber, setOrderNumber] = useState('');
@@ -222,13 +214,18 @@ export default function Checkout() {
                 <div className="mb-8">
                   <div className="bg-gradient-to-br from-eternita-teal-dark to-eternita-teal rounded-2xl p-6 text-eternita-white shadow-xl max-w-sm mx-auto">
                     <div className="flex justify-between items-start mb-8">
-                      <span className="text-xs font-medium opacity-70">{cardBrands.find(c => c.value === payment.brand)?.label || 'Card'}</span>
+                      <span className="text-xs font-medium opacity-70">
+                        {payment.cardNumber.startsWith('4') ? 'Visa' :
+                         payment.cardNumber.startsWith('5') ? 'Mastercard' :
+                         payment.cardNumber.startsWith('3') ? 'American Express' :
+                         payment.cardNumber.startsWith('6') ? 'Discover' : 'Card'}
+                      </span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 opacity-70">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
                       </svg>
                     </div>
                     <p className="font-mono text-lg md:text-xl tracking-widest mb-4">
-                      {payment.cardNumber}
+                      {payment.cardNumber || '•••• •••• •••• ••••'}
                     </p>
                     <div className="flex justify-between items-end">
                       <div>
@@ -246,28 +243,23 @@ export default function Checkout() {
                 {/* Card Form */}
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Card Brand</label>
-                    <select
-                      name="brand"
-                      value={payment.brand}
-                      onChange={handlePaymentChange}
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal"
-                    >
-                      {cardBrands.map((c) => (
-                        <option key={c.value} value={c.value}>{c.label}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
                     <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Card Number</label>
-                    <input
-                      name="cardNumber"
-                      value={payment.cardNumber}
-                      onChange={handlePaymentChange}
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal font-mono"
-                      placeholder="**** **** **** ****"
-                      maxLength={19}
-                    />
+                    <div className="relative">
+                      <input
+                        name="cardNumber"
+                        value={payment.cardNumber}
+                        onChange={handlePaymentChange}
+                        className="w-full px-4 py-3 pl-10 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal font-mono tracking-wider"
+                        placeholder="4242 4242 4242 4242"
+                        maxLength={19}
+                      />
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold opacity-40">
+                        {payment.cardNumber.startsWith('4') ? 'V' :
+                         payment.cardNumber.startsWith('5') ? 'M' :
+                         payment.cardNumber.startsWith('3') ? 'A' :
+                         payment.cardNumber.startsWith('6') ? 'D' : 'C'}
+                      </span>
+                    </div>
                   </div>
                   <div>
                     <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Cardholder Name</label>
@@ -304,11 +296,21 @@ export default function Checkout() {
                       />
                     </div>
                   </div>
+                  <div className="flex items-center gap-2 text-xs text-eternita-gray pt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-eternita-teal">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                    </svg>
+                    <span>Secure encrypted payment. Your card details are never stored.</span>
+                  </div>
                 </div>
 
                 <div className="flex gap-3 mt-8">
                   <button onClick={() => setStep(1)} className="btn-secondary flex-1 text-center">Back</button>
-                  <button onClick={handleConfirm} className="btn-primary flex-1 text-center">
+                  <button
+                    onClick={handleConfirm}
+                    disabled={!payment.cardNumber || !payment.cardName || !payment.expiry || !payment.cvv}
+                    className="btn-primary flex-1 text-center disabled:opacity-40"
+                  >
                     Pay ${totalPrice.toFixed(0)}
                   </button>
                 </div>
@@ -350,9 +352,17 @@ export default function Checkout() {
                 <ul className="space-y-3 mb-6">
                   {items.map((item) => (
                     <li key={item.id} className="flex gap-3 pb-3 border-b border-eternita-taupe/20">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-eternita-teal to-eternita-teal-dark flex items-center justify-center shrink-0">
-                        <span className="font-serif font-bold text-white text-xs">{item.name.charAt(0)}</span>
-                      </div>
+                      {(item.image || item.serviceIndex) ? (
+                        <img
+                          src={item.image || `/images/service-${item.serviceIndex || 1}.jpg`}
+                          alt={item.name}
+                          className="w-12 h-12 rounded-lg object-cover shrink-0"
+                        />
+                      ) : (
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-eternita-teal to-eternita-teal-dark flex items-center justify-center shrink-0">
+                          <span className="font-serif font-bold text-white text-xs">{item.name.charAt(0)}</span>
+                        </div>
+                      )}
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-eternita-dark truncate">{item.name}</p>
                         <p className="text-xs text-eternita-gray">Qty: {item.qty}</p>
