@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <!-- Warm wall gradient -->
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5F0E8"/>
+      <stop offset="50%" stop-color="#F0EBE0"/>
+      <stop offset="100%" stop-color="#EBE4D5"/>
+    </linearGradient>
+    <!-- Floor gradient -->
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C9BAA0"/>
+      <stop offset="40%" stop-color="#C0B094"/>
+      <stop offset="100%" stop-color="#B8A888"/>
+    </linearGradient>
+    <!-- Bed linen -->
+    <linearGradient id="linen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#FCF9F4"/>
+      <stop offset="100%" stop-color="#F7F2E8"/>
+    </linearGradient>
+    <!-- Gold accent -->
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4B87A"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#B89850"/>
+    </linearGradient>
+    <!-- Gold light -->
+    <linearGradient id="goldLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8D5A3"/>
+      <stop offset="100%" stop-color="#D4B87A"/>
+    </linearGradient>
+    <!-- Curtain gradient -->
+    <linearGradient id="curtainGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F5F0E8"/>
+      <stop offset="30%" stop-color="#FDFAF5"/>
+      <stop offset="70%" stop-color="#FDFAF5"/>
+      <stop offset="100%" stop-color="#F0EBE0"/>
+    </linearGradient>
+    <!-- Window light -->
+    <linearGradient id="windowLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8F0F0"/>
+      <stop offset="100%" stop-color="#D0E0E0"/>
+    </linearGradient>
+    <!-- Candle glow -->
+    <radialGradient id="candleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE8A0" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#FFD700" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Overhead light glow -->
+    <radialGradient id="overheadGlow" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#FFF5E0" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#FFE8C0" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFE8C0" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadows -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="15" flood-color="#1A1A1E" flood-opacity="0.10"/>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#1A1A1E" flood-opacity="0.06"/>
+    </filter>
+    <filter id="innerGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Wall -->
+  <rect width="1000" height="480" fill="url(#wallGrad)"/>
+
+  <!-- Wainscoting/panel details on wall -->
+  <g opacity="0.08">
+    <rect x="40" y="160" width="200" height="280" rx="2" fill="none" stroke="#1A1A1E" stroke-width="1.5"/>
+    <rect x="280" y="160" width="200" height="280" rx="2" fill="none" stroke="#1A1A1E" stroke-width="1.5"/>
+    <rect x="520" y="160" width="200" height="280" rx="2" fill="none" stroke="#1A1A1E" stroke-width="1.5"/>
+    <rect x="760" y="160" width="200" height="280" rx="2" fill="none" stroke="#1A1A1E" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floor -->
+  <rect y="480" width="1000" height="220" fill="url(#floorGrad)"/>
+  <line x1="0" y1="480" x2="1000" y2="480" stroke="#B8A888" stroke-width="3"/>
+
+  <!-- Floor planks -->
+  <g opacity="0.12" stroke="#8E8E93" stroke-width="0.7">
+    <line x1="0" y1="510" x2="1000" y2="510"/>
+    <line x1="0" y1="545" x2="1000" y2="545"/>
+    <line x1="0" y1="580" x2="1000" y2="580"/>
+    <line x1="0" y1="615" x2="1000" y2="615"/>
+    <line x1="0" y1="650" x2="1000" y2="650"/>
+  </g>
+
+  <!-- Vertical plank lines -->
+  <g opacity="0.06" stroke="#8E8E93" stroke-width="0.5">
+    <line x1="80" y1="480" x2="80" y2="700"/>
+    <line x1="230" y1="480" x2="230" y2="700"/>
+    <line x1="400" y1="480" x2="400" y2="700"/>
+    <line x1="550" y1="480" x2="550" y2="700"/>
+    <line x1="720" y1="480" x2="720" y2="700"/>
+    <line x1="880" y1="480" x2="880" y2="700"/>
+  </g>
+
+  <!-- Baseboard -->
+  <rect y="472" width="1000" height="12" fill="#B8A888" opacity="0.6"/>
+  <rect y="472" width="1000" height="3" fill="#A89870" opacity="0.4"/>
+
+  <!-- Window -->
+  <rect x="340" y="60" width="320" height="380" rx="6" fill="#D8D0C0" stroke="#B8A888" stroke-width="3"/>
+  <rect x="350" y="70" width="300" height="360" rx="3" fill="url(#windowLight)" opacity="0.4"/>
+  <!-- Window frame inner -->
+  <rect x="350" y="70" width="300" height="360" rx="3" fill="none" stroke="#D8D0C0" stroke-width="1.5"/>
+  <!-- Window cross frames -->
+  <line x1="500" y1="70" x2="500" y2="430" stroke="#B8A888" stroke-width="2.5"/>
+  <line x1="350" y1="250" x2="650" y2="250" stroke="#B8A888" stroke-width="2.5"/>
+  <!-- Window sill -->
+  <rect x="325" y="430" width="350" height="14" rx="3" fill="#D0C8B5" stroke="#B8A888" stroke-width="1.5"/>
+
+  <!-- Sheer curtain left panel -->
+  <g opacity="0.75">
+    <rect x="290" y="45" width="80" height="400" rx="3" fill="url(#curtainGrad)" opacity="0.8"/>
+    <path d="M290 45 Q330 60 370 50 L370 445 L290 445 Z" fill="url(#curtainGrad)" opacity="0.4"/>
+    <!-- Curtain folds -->
+    <path d="M300 60 Q305 200 300 420" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M320 55 Q325 200 320 425" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M340 55 Q345 200 340 425" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M360 55 Q365 200 360 425" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.3"/>
+    <!-- Curtain rod -->
+    <rect x="280" y="45" width="440" height="8" rx="4" fill="url(#gold)"/>
+    <!-- Finials -->
+    <circle cx="280" cy="49" r="10" fill="url(#gold)"/>
+    <circle cx="720" cy="49" r="10" fill="url(#gold)"/>
+  </g>
+
+  <!-- Sheer curtain right panel -->
+  <g opacity="0.75">
+    <rect x="630" y="45" width="80" height="400" rx="3" fill="url(#curtainGrad)" opacity="0.8"/>
+    <path d="M710 45 L710 445 L670 445 Q650 300 670 50 Z" fill="url(#curtainGrad)" opacity="0.4"/>
+    <path d="M700 60 Q695 200 700 420" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M680 55 Q675 200 680 425" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M660 55 Q655 200 660 425" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.3"/>
+  </g>
+
+  <!-- Curtain valance / top drape -->
+  <path d="M280 45 Q500 25 720 45 L720 65 Q500 45 280 65 Z" fill="url(#curtainGrad)" opacity="0.9"/>
+
+  <!-- Treatment bed / massage table -->
+  <g filter="url(#shadow)">
+    <!-- Bed frame -->
+    <rect x="220" y="370" width="560" height="95" rx="14" fill="url(#linen)"/>
+    <!-- Bed base -->
+    <rect x="230" y="465" width="540" height="8" rx="3" fill="#E8E0D0"/>
+    <!-- Mattress padding -->
+    <rect x="235" y="378" width="530" height="50" rx="10" fill="#FFFFFF" opacity="0.8"/>
+    <!-- Top sheet -->
+    <rect x="235" y="378" width="530" height="30" rx="8" fill="#FFFFFF" opacity="0.5"/>
+    
+    <!-- Pillow -->
+    <ellipse cx="290" cy="410" rx="55" ry="28" fill="#FFFFFF"/>
+    <ellipse cx="290" cy="410" rx="50" ry="24" fill="url(#linen)"/>
+    <!-- Pillow fold detail -->
+    <path d="M265 405 Q290 415 315 410" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M270 415 Q290 420 310 415" stroke="#E8E0D0" stroke-width="1" fill="none" opacity="0.4"/>
+    
+    <!-- Folded towel stack -->
+    <rect x="430" y="385" width="130" height="55" rx="6" fill="#FFFFFF" opacity="0.85" filter="url(#softShadow)"/>
+    <line x1="430" y1="400" x2="560" y2="400" stroke="#EDE8DC" stroke-width="1.5" opacity="0.6"/>
+    <line x1="430" y1="413" x2="560" y2="413" stroke="#EDE8DC" stroke-width="1.5" opacity="0.6"/>
+    <line x1="430" y1="426" x2="560" y2="426" stroke="#EDE8DC" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- Small rolled towel -->
+    <rect x="600" y="395" width="55" height="28" rx="14" fill="#FFFFFF" opacity="0.7" filter="url(#softShadow)"/>
+    
+    <!-- Bed leg left -->
+    <rect x="240" y="473" width="10" height="22" rx="3" fill="url(#gold)"/>
+    <!-- Bed leg right -->
+    <rect x="750" y="473" width="10" height="22" rx="3" fill="url(#gold)"/>
+  </g>
+
+  <!-- Side table left -->
+  <g filter="url(#softShadow)">
+    <rect x="145" y="390" width="55" height="70" rx="6" fill="#FCF9F2" stroke="#E0D8C8" stroke-width="1"/>
+    <rect x="140" y="383" width="65" height="12" rx="4" fill="url(#gold)"/>
+    <!-- Table legs -->
+    <rect x="150" y="460" width="6" height="30" rx="2" fill="url(#gold)"/>
+    <rect x="189" y="460" width="6" height="30" rx="2" fill="url(#gold)"/>
+  </g>
+
+  <!-- Candle on left table -->
+  <g>
+    <!-- Glow -->
+    <ellipse cx="172" cy="365" rx="40" ry="35" fill="url(#candleGlow)"/>
+    <!-- Candle body -->
+    <rect x="160" y="395" width="24" height="40" rx="4" fill="#F5F0E0"/>
+    <rect x="160" y="395" width="24" height="40" rx="4" fill="url(#candleGlow)" opacity="0.2"/>
+    <!-- Melted wax detail -->
+    <path d="M160 405 Q165 400 172 405 Q178 402 184 405" stroke="#EDE0C0" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Candle top rim -->
+    <rect x="158" y="393" width="28" height="5" rx="2" fill="#E8DCC0"/>
+    <!-- Wick -->
+    <line x1="172" y1="393" x2="172" y2="386" stroke="#1A1A1E" stroke-width="1.5"/>
+    <!-- Flame outer -->
+    <ellipse cx="172" cy="381" rx="6" ry="10" fill="#FFD700" opacity="0.7" filter="url(#innerGlow)"/>
+    <!-- Flame inner -->
+    <ellipse cx="172" cy="383" rx="3" ry="6" fill="#FFF8E0"/>
+  </g>
+
+  <!-- Small decor book stack on left table -->
+  <rect x="148" y="428" width="25" height="6" rx="1" fill="#C9A96E" opacity="0.5"/>
+  <rect x="150" y="435" width="22" height="6" rx="1" fill="#A8884A" opacity="0.4"/>
+
+  <!-- Side table right -->
+  <g filter="url(#softShadow)">
+    <rect x="800" y="390" width="55" height="70" rx="6" fill="#FCF9F2" stroke="#E0D8C8" stroke-width="1"/>
+    <rect x="795" y="383" width="65" height="12" rx="4" fill="url(#gold)"/>
+    <rect x="805" y="460" width="6" height="30" rx="2" fill="url(#gold)"/>
+    <rect x="844" y="460" width="6" height="30" rx="2" fill="url(#gold)"/>
+  </g>
+
+  <!-- Plant on right table -->
+  <g>
+    <!-- Pot -->
+    <path d="M815 440 L820 465 L840 465 L845 440 Z" fill="#D4A060" stroke="#C09050" stroke-width="1"/>
+    <rect x="817" y="438" width="26" height="5" rx="2" fill="#D4A060" stroke="#C09050" stroke-width="1"/>
+    <!-- Leaves -->
+    <ellipse cx="825" cy="420" rx="12" ry="18" fill="#5A8A5A" opacity="0.8" transform="rotate(-15 825 420)"/>
+    <ellipse cx="835" cy="425" rx="10" ry="15" fill="#4A7A4A" opacity="0.7" transform="rotate(15 835 425)"/>
+    <ellipse cx="820" cy="428" rx="8" ry="12" fill="#6A9A6A" opacity="0.6" transform="rotate(-30 820 428)"/>
+    <ellipse cx="832" cy="415" rx="9" ry="14" fill="#5A8A5A" opacity="0.7" transform="rotate(25 832 415)"/>
+    <!-- Small leaf detail -->
+    <line x1="825" y1="432" x2="818" y2="405" stroke="#5A8A5A" stroke-width="1" opacity="0.4"/>
+    <line x1="835" y1="435" x2="842" y2="410" stroke="#4A7A4A" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Aroma diffuser / reed diffuser on right table -->
+  <g opacity="0.6">
+    <rect x="848" y="410" width="5" height="25" rx="2" fill="#C9A96E" opacity="0.5"/>
+    <rect x="852" y="410" width="5" height="25" rx="2" fill="#C9A96E" opacity="0.4"/>
+    <rect x="850" y="406" width="3" height="6" rx="1" fill="#C9A96E" opacity="0.3"/>
+  </g>
+
+  <!-- Ceiling light fixture -->
+  <rect x="460" y="0" width="80" height="14" rx="3" fill="url(#gold)"/>
+  <rect x="475" y="14" width="50" height="6" rx="2" fill="url(#goldLight)"/>
+  <!-- Light chain -->
+  <line x1="500" y1="0" x2="500" y2="20" stroke="#C9A96E" stroke-width="2"/>
+  <!-- Light shade -->
+  <path d="M465 20 L480 50 L520 50 L535 20 Z" fill="#F5F0E0" stroke="#E0D8C8" stroke-width="1" opacity="0.8"/>
+  <!-- Bulb glow -->
+  <ellipse cx="500" cy="45" rx="25" ry="30" fill="url(#candleGlow)" opacity="0.8"/>
+
+  <!-- Overhead warm light -->
+  <ellipse cx="500" cy="0" rx="400" ry="250" fill="url(#overheadGlow)"/>
+
+  <!-- Wall art / framed print -->
+  <g filter="url(#softShadow)">
+    <rect x="60" y="130" width="140" height="110" rx="4" fill="#FCF9F2" stroke="url(#gold)" stroke-width="3"/>
+    <rect x="72" y="142" width="116" height="86" rx="2" fill="#F0EBE0"/>
+    <!-- Abstract art content -->
+    <circle cx="130" cy="185" r="20" fill="#C9A96E" opacity="0.2"/>
+    <circle cx="130" cy="185" r="12" fill="#C9A96E" opacity="0.3"/>
+    <circle cx="130" cy="185" r="5" fill="#C9A96E" opacity="0.5"/>
+    <!-- Art accent lines -->
+    <line x1="100" y1="170" x2="110" y2="195" stroke="#C9A96E" stroke-width="1.5" opacity="0.3"/>
+    <line x1="150" y1="195" x2="140" y2="170" stroke="#C9A96E" stroke-width="1" opacity="0.2"/>
+  </g>
+
+  <!-- Decorative shelf -->
+  <g filter="url(#softShadow)">
+    <rect x="800" y="150" width="130" height="10" rx="2" fill="url(#gold)"/>
+    <!-- Small vase -->
+    <path d="M820 140 L822 150 L838 150 L840 140 Z" fill="#D4B87A" opacity="0.6"/>
+    <!-- Small dried flowers in vase -->
+    <line x1="825" y1="140" x2="822" y2="120" stroke="#8B7355" stroke-width="1.5"/>
+    <line x1="830" y1="140" x2="830" y2="115" stroke="#8B7355" stroke-width="1.5"/>
+    <line x1="835" y1="140" x2="838" y2="120" stroke="#8B7355" stroke-width="1.5"/>
+    <circle cx="822" cy="118" r="2" fill="#D4B87A" opacity="0.5"/>
+    <circle cx="830" cy="113" r="2" fill="#D4B87A" opacity="0.5"/>
+    <circle cx="838" cy="118" r="2" fill="#D4B87A" opacity="0.5"/>
+  </g>
+
+  <!-- Soft floor rug under bed -->
+  <ellipse cx="500" cy="490" rx="320" ry="25" fill="#C9A96E" opacity="0.05"/>
+
+  <!-- Ambient warm vignette overlay -->
+  <rect width="1000" height="700" fill="#C9A96E" opacity="0.02"/>
+
+  <!-- Dark bottom vignette -->
+  <rect y="650" width="1000" height="50" fill="#1A1A1E" opacity="0.04"/>
+</svg>

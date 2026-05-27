@@ -58,11 +58,11 @@ export default function Checkout() {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center max-w-md mx-auto px-4 py-16">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-20 h-20 mx-auto text-eternita-gray/30 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-20 h-20 mx-auto text-kristals-gray/30 mb-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
           </svg>
-          <h2 className="font-serif text-2xl font-bold text-eternita-dark mb-2">Your Cart is Empty</h2>
-          <p className="text-eternita-gray text-sm mb-8">Looks like you haven't added any treatments or packages yet. Browse our menu to get started.</p>
+          <h2 className="font-serif text-2xl font-bold text-kristals-dark mb-2">Your Cart is Empty</h2>
+          <p className="text-kristals-gray text-sm mb-8">Looks like you haven't added any treatments or packages yet. Browse our menu to get started.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/treatments" className="btn-primary">Browse Treatments</Link>
             <Link to="/packages" className="btn-secondary">View Packages</Link>
@@ -73,15 +73,15 @@ export default function Checkout() {
   }
 
   return (
-    <div className="min-h-screen bg-eternita-light">
+    <div className="min-h-screen bg-kristals-light">
       {/* Header */}
-      <div className="bg-eternita-white border-b border-eternita-taupe/40">
+      <div className="bg-kristals-white border-b border-kristals-taupe/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <Link to="/" className="flex items-center gap-2 w-fit">
-            <div className="w-8 h-8 rounded-lg bg-eternita-teal flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-kristals-gold flex items-center justify-center">
               <span className="font-serif font-bold text-white text-sm">K</span>
             </div>
-            <span className="font-serif text-xl font-bold text-eternita-teal">Kristal's</span>
+            <span className="font-serif text-xl font-bold text-kristals-gold">Kristal's</span>
           </Link>
         </div>
       </div>
@@ -96,10 +96,10 @@ export default function Checkout() {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
                       step > s.id
-                        ? 'bg-eternita-teal text-white'
+                        ? 'bg-kristals-gold text-white'
                         : step === s.id
-                        ? 'bg-eternita-teal text-white ring-4 ring-eternita-teal/20'
-                        : 'bg-eternita-taupe/50 text-eternita-gray'
+                        ? 'bg-kristals-gold text-white ring-4 ring-kristals-gold/20'
+                        : 'bg-kristals-taupe/50 text-kristals-gray'
                     }`}
                   >
                     {step > s.id ? (
@@ -112,7 +112,7 @@ export default function Checkout() {
                   </div>
                   <span
                     className={`hidden sm:inline text-xs font-medium ${
-                      step >= s.id ? 'text-eternita-dark' : 'text-eternita-gray'
+                      step >= s.id ? 'text-kristals-dark' : 'text-kristals-gray'
                     }`}
                   >
                     {s.label}
@@ -121,7 +121,7 @@ export default function Checkout() {
                 {i < steps.length - 1 && (
                   <div
                     className={`w-12 md:w-20 h-0.5 mx-2 ${
-                      step > s.id ? 'bg-eternita-teal' : 'bg-eternita-taupe/50'
+                      step > s.id ? 'bg-kristals-gold' : 'bg-kristals-taupe/50'
                     }`}
                   />
                 )}
@@ -134,27 +134,27 @@ export default function Checkout() {
           {/* Main content */}
           <div className="lg:col-span-3">
             {step === 1 && (
-              <div className="bg-eternita-white rounded-2xl p-6 md:p-8 border border-eternita-taupe/30">
-                <h2 className="font-serif text-2xl font-bold text-eternita-dark mb-6">Contact Details</h2>
+              <div className="bg-kristals-white rounded-2xl p-6 md:p-8 border border-kristals-taupe/30">
+                <h2 className="font-serif text-2xl font-bold text-kristals-dark mb-6">Contact Details</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">First Name</label>
+                    <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">First Name</label>
                     <input
                       name="firstName"
                       value={form.firstName}
                       onChange={handleFormChange}
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold"
                       placeholder="Jane"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Last Name</label>
+                    <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">Last Name</label>
                     <input
                       name="lastName"
                       value={form.lastName}
                       onChange={handleFormChange}
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold"
                       placeholder="Doe"
                       required
                     />
@@ -162,37 +162,37 @@ export default function Checkout() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Email</label>
+                    <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">Email</label>
                     <input
                       name="email"
                       type="email"
                       value={form.email}
                       onChange={handleFormChange}
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold"
                       placeholder="jane@example.com"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Phone</label>
+                    <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">Phone</label>
                     <input
                       name="phone"
                       type="tel"
                       value={form.phone}
                       onChange={handleFormChange}
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold"
                       placeholder="(509) 986-3222"
                     />
                   </div>
                 </div>
                 <div className="mb-6">
-                  <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Special Notes (optional)</label>
+                  <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">Special Notes (optional)</label>
                   <textarea
                     name="notes"
                     value={form.notes}
                     onChange={handleFormChange}
                     rows={3}
-                    className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold resize-none"
                     placeholder="Any allergies, preferences, or special requests..."
                   />
                 </div>
@@ -201,18 +201,18 @@ export default function Checkout() {
                     Continue to Payment
                   </button>
                 ) : (
-                  <p className="text-eternita-gray text-xs">Please fill in all required fields to continue.</p>
+                  <p className="text-kristals-gray text-xs">Please fill in all required fields to continue.</p>
                 )}
               </div>
             )}
 
             {step === 2 && (
-              <div className="bg-eternita-white rounded-2xl p-6 md:p-8 border border-eternita-taupe/30">
-                <h2 className="font-serif text-2xl font-bold text-eternita-dark mb-6">Payment Details</h2>
+              <div className="bg-kristals-white rounded-2xl p-6 md:p-8 border border-kristals-taupe/30">
+                <h2 className="font-serif text-2xl font-bold text-kristals-dark mb-6">Payment Details</h2>
 
                 {/* Card Preview */}
                 <div className="mb-8">
-                  <div className="bg-gradient-to-br from-eternita-teal-dark to-eternita-teal rounded-2xl p-6 text-eternita-white shadow-xl max-w-sm mx-auto">
+                  <div className="bg-gradient-to-br from-kristals-gold-dark to-kristals-gold rounded-2xl p-6 text-kristals-white shadow-xl max-w-sm mx-auto">
                     <div className="flex justify-between items-start mb-8">
                       <span className="text-xs font-medium opacity-70">
                         {payment.cardNumber.startsWith('4') ? 'Visa' :
@@ -243,13 +243,13 @@ export default function Checkout() {
                 {/* Card Form */}
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Card Number</label>
+                    <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">Card Number</label>
                     <div className="relative">
                       <input
                         name="cardNumber"
                         value={payment.cardNumber}
                         onChange={handlePaymentChange}
-                        className="w-full px-4 py-3 pl-10 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal font-mono tracking-wider"
+                        className="w-full px-4 py-3 pl-10 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold font-mono tracking-wider"
                         placeholder="4242 4242 4242 4242"
                         maxLength={19}
                       />
@@ -262,42 +262,42 @@ export default function Checkout() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Cardholder Name</label>
+                    <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">Cardholder Name</label>
                     <input
                       name="cardName"
                       value={payment.cardName}
                       onChange={handlePaymentChange}
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold"
                       placeholder="Jane Doe"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">Expiry Date</label>
+                      <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">Expiry Date</label>
                       <input
                         name="expiry"
                         value={payment.expiry}
                         onChange={handlePaymentChange}
-                        className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal font-mono"
+                        className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold font-mono"
                         placeholder="MM/YY"
                         maxLength={5}
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-eternita-dark/70 mb-1.5">CVV</label>
+                      <label className="block text-xs font-medium text-kristals-dark/70 mb-1.5">CVV</label>
                       <input
                         name="cvv"
                         type="password"
                         value={payment.cvv}
                         onChange={handlePaymentChange}
-                        className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-cream text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal font-mono"
+                        className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-cream text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold font-mono"
                         placeholder="***"
                         maxLength={4}
                       />
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-eternita-gray pt-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-eternita-teal">
+                  <div className="flex items-center gap-2 text-xs text-kristals-gray pt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-kristals-gold">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                     </svg>
                     <span>Secure encrypted payment. Your card details are never stored.</span>
@@ -318,20 +318,20 @@ export default function Checkout() {
             )}
 
             {step === 3 && confirmed && (
-              <div className="bg-eternita-white rounded-2xl p-8 md:p-10 border border-eternita-taupe/30 text-center">
+              <div className="bg-kristals-white rounded-2xl p-8 md:p-10 border border-kristals-taupe/30 text-center">
                 <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8 text-green-600">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                   </svg>
                 </div>
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-eternita-dark mb-2">Order Confirmed!</h2>
-                <p className="text-eternita-gray text-sm mb-4">Thank you for choosing Kristal's. Your wellness journey begins now.</p>
-                <div className="bg-eternita-light rounded-xl p-4 mb-6 inline-block">
-                  <p className="text-xs text-eternita-gray mb-1">Order Number</p>
-                  <p className="font-mono font-bold text-eternita-teal">{orderNumber}</p>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-kristals-dark mb-2">Order Confirmed!</h2>
+                <p className="text-kristals-gray text-sm mb-4">Thank you for choosing Kristal's. Your wellness journey begins now.</p>
+                <div className="bg-kristals-light rounded-xl p-4 mb-6 inline-block">
+                  <p className="text-xs text-kristals-gray mb-1">Order Number</p>
+                  <p className="font-mono font-bold text-kristals-gold">{orderNumber}</p>
                 </div>
-                <div className="space-y-2 text-sm text-eternita-gray mb-8">
-                  <p>A confirmation email will be sent to <strong className="text-eternita-dark">{form.email}</strong></p>
+                <div className="space-y-2 text-sm text-kristals-gray mb-8">
+                  <p>A confirmation email will be sent to <strong className="text-kristals-dark">{form.email}</strong></p>
                   <p>Our team will contact you within 24 hours to schedule your appointment.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -345,13 +345,13 @@ export default function Checkout() {
           {/* Order Summary Sidebar */}
           {step < 3 && (
             <div className="lg:col-span-2">
-              <div className="bg-eternita-white rounded-2xl p-6 border border-eternita-taupe/30 sticky top-28">
-                <h3 className="font-serif text-lg font-bold text-eternita-dark mb-4">
+              <div className="bg-kristals-white rounded-2xl p-6 border border-kristals-taupe/30 sticky top-28">
+                <h3 className="font-serif text-lg font-bold text-kristals-dark mb-4">
                   Order Summary ({cartCount} {cartCount === 1 ? 'item' : 'items'})
                 </h3>
                 <ul className="space-y-3 mb-6">
                   {items.map((item) => (
-                    <li key={item.id} className="flex gap-3 pb-3 border-b border-eternita-taupe/20">
+                    <li key={item.id} className="flex gap-3 pb-3 border-b border-kristals-taupe/20">
                       {(item.image || item.serviceIndex) ? (
                         <img
                           src={item.image || `/images/service-${item.serviceIndex || 1}.jpg`}
@@ -359,33 +359,33 @@ export default function Checkout() {
                           className="w-12 h-12 rounded-lg object-cover shrink-0"
                         />
                       ) : (
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-eternita-teal to-eternita-teal-dark flex items-center justify-center shrink-0">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-kristals-gold to-kristals-gold-dark flex items-center justify-center shrink-0">
                           <span className="font-serif font-bold text-white text-xs">{item.name.charAt(0)}</span>
                         </div>
                       )}
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-eternita-dark truncate">{item.name}</p>
-                        <p className="text-xs text-eternita-gray">Qty: {item.qty}</p>
+                        <p className="text-sm font-medium text-kristals-dark truncate">{item.name}</p>
+                        <p className="text-xs text-kristals-gray">Qty: {item.qty}</p>
                       </div>
-                      <p className="text-sm font-bold text-eternita-dark shrink-0">${(item.price * item.qty).toFixed(0)}</p>
+                      <p className="text-sm font-bold text-kristals-dark shrink-0">${(item.price * item.qty).toFixed(0)}</p>
                     </li>
                   ))}
                 </ul>
                 <div className="space-y-2 text-sm mb-4">
-                  <div className="flex justify-between text-eternita-gray">
+                  <div className="flex justify-between text-kristals-gray">
                     <span>Subtotal</span>
                     <span>${totalPrice.toFixed(0)}</span>
                   </div>
-                  <div className="flex justify-between text-eternita-gray">
+                  <div className="flex justify-between text-kristals-gray">
                     <span>Tax</span>
                     <span>Calculated at next step</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center pt-4 border-t border-eternita-taupe/30">
-                  <span className="font-serif text-lg font-bold text-eternita-dark">Total</span>
-                  <span className="font-serif text-2xl font-bold text-eternita-teal">${totalPrice.toFixed(0)}</span>
+                <div className="flex justify-between items-center pt-4 border-t border-kristals-taupe/30">
+                  <span className="font-serif text-lg font-bold text-kristals-dark">Total</span>
+                  <span className="font-serif text-2xl font-bold text-kristals-gold">${totalPrice.toFixed(0)}</span>
                 </div>
-                <p className="text-[10px] text-eternita-gray mt-4 text-center">
+                <p className="text-[10px] text-kristals-gray mt-4 text-center">
                   Secure checkout. Your information is encrypted and never shared.
                 </p>
               </div>

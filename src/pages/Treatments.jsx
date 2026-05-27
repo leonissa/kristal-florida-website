@@ -7,7 +7,7 @@ const services = [
     name: 'HydraFacial MD',
     price: 199,
     duration: '50 min',
-    gradient: 'from-eternita-teal to-eternita-teal-dark',
+    gradient: 'from-kristals-gold to-kristals-gold-dark',
     initials: 'HF',
     desc: 'Experience the gold standard in facial rejuvenation. Our HydraFacial combines vortex-cleaning, gentle extractions, and intense hydration to deliver instant, visible results with zero downtime.',
     bullets: [
@@ -22,7 +22,7 @@ const services = [
     name: 'Oxygen Facial',
     price: 189,
     duration: '45 min',
-    gradient: 'from-eternita-coral to-eternita-coral-light',
+    gradient: 'from-kristals-gold to-kristals-gold-light',
     initials: 'OF',
     desc: 'Infuse your skin with pure oxygen and concentrated active ingredients. This painless, refreshing treatment boosts circulation, reduces puffiness, and delivers an instant "glass skin" glow.',
     bullets: [
@@ -37,7 +37,7 @@ const services = [
     name: 'Hydrating Facial',
     price: 139,
     duration: '45 min',
-    gradient: 'from-eternita-teal-light to-eternita-coral-light',
+    gradient: 'from-kristals-gold-light to-kristals-gold-light',
     initials: 'HF',
     desc: 'An ultra-nourishing facial designed for dehydrated and dull skin. Layers of hyaluronic acid, ceramides, and botanical extracts restore moisture balance and leave skin plump and dewy.',
     bullets: [
@@ -52,7 +52,7 @@ const services = [
     name: 'Classic Facial',
     price: 129,
     duration: '50 min',
-    gradient: 'from-eternita-teal to-eternita-teal-light',
+    gradient: 'from-kristals-gold to-kristals-gold-light',
     initials: 'CF',
     desc: 'Our foundational facial experience. A thorough cleanse, gentle exfoliation, pore extraction, and customized mask — everything your skin needs to feel refreshed, balanced, and radiant.',
     bullets: [
@@ -67,7 +67,7 @@ const services = [
     name: 'LED Light Therapy',
     price: 129,
     duration: '40 min',
-    gradient: 'from-eternita-teal-dark to-eternita-coral',
+    gradient: 'from-kristals-gold-dark to-kristals-gold',
     initials: 'LL',
     desc: 'Harness the power of therapeutic light wavelengths. Our LED panels deliver precise red and blue light to calm inflammation, target blemishes, and support natural collagen production.',
     bullets: [
@@ -82,7 +82,7 @@ const services = [
     name: 'Dermaplaning',
     price: 99,
     duration: '30 min',
-    gradient: 'from-eternita-taupe to-eternita-teal-light',
+    gradient: 'from-kristals-taupe to-kristals-gold-light',
     initials: 'DP',
     desc: 'Achieve instantly smoother skin with this gentle exfoliation treatment that removes dead skin cells and fine vellus hair for a luminous, polished complexion.',
     bullets: [
@@ -100,13 +100,21 @@ export default function Treatments() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-eternita-teal-dark via-eternita-teal to-eternita-teal-light py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="section-label text-eternita-coral-light">Treatments</span>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-eternita-white mt-3 mb-4">
+      <section className="relative overflow-hidden min-h-[50vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="/images/service-4.jpg"
+            alt="Kristal's Treatments"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-kristals-dark/85 via-kristals-dark/75 to-kristals-gold-dark/65" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+          <span className="section-label text-kristals-gold-light">Treatments</span>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-kristals-white mt-3 mb-4">
             Curated Facials,<br />Beautiful Results
           </h1>
-          <p className="text-eternita-white/70 max-w-2xl mx-auto text-sm md:text-lg">
+          <p className="text-kristals-white/70 max-w-2xl mx-auto text-sm md:text-lg">
             Every treatment at Kristal's is tailored to your unique skin needs and delivered in a relaxing, welcoming environment.
           </p>
         </div>
@@ -118,13 +126,13 @@ export default function Treatments() {
           <div className="text-center mb-14">
             <span className="section-label">Our Services</span>
             <h2 className="section-heading mt-3">Facial Services</h2>
-            <p className="text-eternita-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
+            <p className="text-kristals-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
               Each treatment is designed to restore, rejuvenate, and reveal your best skin.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={service.id} className="bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover flex flex-col">
+              <div key={service.id} className="bg-kristals-white rounded-2xl overflow-hidden border border-kristals-taupe/30 card-hover flex flex-col">
                 {/* Image placeholder */}
                 <div className="h-52 overflow-hidden relative">
                   <img src={`/images/service-${index + 1}.jpg`} alt={service.name} className="w-full h-full object-cover" />
@@ -134,13 +142,13 @@ export default function Treatments() {
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="font-serif text-xl font-bold text-eternita-dark">{service.name}</h3>
-                  <p className="text-eternita-teal text-2xl font-bold mt-1">${service.price}</p>
-                  <p className="text-eternita-gray text-sm mt-3 leading-relaxed">{service.desc}</p>
+                  <h3 className="font-serif text-xl font-bold text-kristals-dark">{service.name}</h3>
+                  <p className="text-kristals-gold text-2xl font-bold mt-1">${service.price}</p>
+                  <p className="text-kristals-gray text-sm mt-3 leading-relaxed">{service.desc}</p>
                   <ul className="mt-4 space-y-2 flex-1">
                     {service.bullets.map((b, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-eternita-dark/70">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-eternita-teal shrink-0 mt-0.5">
+                      <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-kristals-dark/70">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-kristals-gold shrink-0 mt-0.5">
                           <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                         </svg>
                         {b}
@@ -150,7 +158,7 @@ export default function Treatments() {
                   <div className="mt-6 flex gap-3">
                     <button
                       onClick={() => addToCart({ id: service.id, name: service.name, price: service.price, duration: service.duration, image: `/images/service-${index + 1}.jpg` })}
-                      className="flex-1 py-2.5 rounded-full border border-eternita-teal text-eternita-teal text-sm font-medium hover:bg-eternita-teal hover:text-white transition-all"
+                      className="flex-1 py-2.5 rounded-full border border-kristals-gold text-kristals-gold text-sm font-medium hover:bg-kristals-gold hover:text-white transition-all"
                     >
                       Add to Cart
                     </button>
@@ -166,12 +174,12 @@ export default function Treatments() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 md:py-28 bg-eternita-light">
+      <section className="py-20 md:py-28 bg-kristals-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-dark mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-kristals-dark mb-4">
             Not Sure Where to Start?
           </h2>
-          <p className="text-eternita-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
+          <p className="text-kristals-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
             Schedule a complimentary consultation and our team at Kristal's will help find the perfect facial for your skin.
           </p>
           <Link to="/contact" className="btn-primary">

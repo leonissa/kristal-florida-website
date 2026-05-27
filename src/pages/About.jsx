@@ -87,13 +87,21 @@ export default function About() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-eternita-teal-dark via-eternita-teal to-eternita-teal-light py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="section-label text-eternita-coral-light">About Us</span>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-eternita-white mt-3 mb-4">
+      <section className="relative overflow-hidden min-h-[50vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="/images/service-2.jpg"
+            alt="Kristal's About"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-kristals-dark/85 via-kristals-dark/75 to-kristals-gold-dark/65" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+          <span className="section-label text-kristals-gold-light">About Us</span>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-kristals-white mt-3 mb-4">
             Elevated Wellness,<br />Expertly Delivered
           </h1>
-          <p className="text-eternita-white/70 max-w-2xl mx-auto text-sm md:text-lg">
+          <p className="text-kristals-white/70 max-w-2xl mx-auto text-sm md:text-lg">
             Kristal's was founded with one belief — that everyone deserves access to professional skincare in an environment that feels like a sanctuary.
           </p>
         </div>
@@ -105,10 +113,10 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="section-label">Our Story</span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-dark mt-3 mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-kristals-dark mt-3 mb-6">
                 Rooted in South Florida, Built for You
               </h2>
-              <div className="space-y-4 text-eternita-gray text-sm md:text-base leading-relaxed">
+              <div className="space-y-4 text-kristals-gray text-sm md:text-base leading-relaxed">
                 <p>
                   Kristal's was born from a simple observation: the med spa industry was full of hype but short on genuine, results-driven care. Our founders — a team of experienced estheticians and wellness practitioners — wanted to create something different: a place where advanced skincare meets authentic hospitality.
                 </p>
@@ -125,7 +133,7 @@ export default function About() {
             </div>
             <div className="h-80 md:h-96 rounded-3xl overflow-hidden">
               <img
-                src="/images/about-story.svg"
+                src="/images/spa-interior.svg"
                 alt="Kristal's story - Davie, FL"
                 className="w-full h-full object-cover"
               />
@@ -135,13 +143,13 @@ export default function About() {
       </section>
 
       {/* Stats */}
-      <section className="bg-eternita-dark py-10">
+      <section className="bg-kristals-dark py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-serif text-3xl md:text-4xl font-bold text-eternita-white">{stat.value}</p>
-                <p className="text-eternita-gray text-sm mt-1 tracking-wider">{stat.label}</p>
+                <p className="font-serif text-3xl md:text-4xl font-bold text-kristals-white">{stat.value}</p>
+                <p className="text-kristals-gray text-sm mt-1 tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -154,18 +162,18 @@ export default function About() {
           <div className="text-center mb-14">
             <span className="section-label">Our Values</span>
             <h2 className="section-heading mt-3">What We Stand For</h2>
-            <p className="text-eternita-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
+            <p className="text-kristals-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
               Four core principles guide every decision we make and every treatment we deliver.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
-              <div key={v.title} className="card-hover bg-eternita-white rounded-2xl p-6 border border-eternita-taupe/30">
-                <div className="w-14 h-14 rounded-xl bg-eternita-teal/10 flex items-center justify-center text-eternita-teal mb-5">
+              <div key={v.title} className="card-hover bg-kristals-white rounded-2xl p-6 border border-kristals-taupe/30">
+                <div className="w-14 h-14 rounded-xl bg-kristals-gold/10 flex items-center justify-center text-kristals-gold mb-5">
                   {v.icon}
                 </div>
-                <h3 className="font-serif text-xl font-bold text-eternita-dark mb-2">{v.title}</h3>
-                <p className="text-eternita-gray text-sm leading-relaxed">{v.desc}</p>
+                <h3 className="font-serif text-xl font-bold text-kristals-dark mb-2">{v.title}</h3>
+                <p className="text-kristals-gray text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -173,15 +181,15 @@ export default function About() {
       </section>
 
       {/* Quote */}
-      <section className="py-16 md:py-24 bg-eternita-light">
+      <section className="py-16 md:py-24 bg-kristals-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-10 h-10 text-eternita-teal/30 mx-auto mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-10 h-10 text-kristals-gold/30 mx-auto mb-6">
             <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.69 11 13.144 11 15c0 1.93-1.57 3.5-3.5 3.5-1.282 0-2.484-.685-2.917-1.179zm9.129 0C12.682 16.227 12.129 15 12.129 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C18.72 11.69 20.129 13.144 20.129 15c0 1.93-1.57 3.5-3.5 3.5-1.282 0-2.484-.685-2.917-1.179z" />
           </svg>
-          <p className="font-serif text-xl md:text-2xl italic text-eternita-dark/80 leading-relaxed mb-6">
+          <p className="font-serif text-xl md:text-2xl italic text-kristals-dark/80 leading-relaxed mb-6">
             "We believe that beauty is about revealing the most radiant version of yourself — just like the vibrant spirit of South Florida. At Kristal's in Davie, we combine science, art, and genuine care to help you glow from the inside out, sunshine or storm."
           </p>
-          <p className="font-semibold text-eternita-dark">— The Kristal's Team</p>
+          <p className="font-semibold text-kristals-dark">— The Kristal's Team</p>
         </div>
       </section>
 
@@ -191,7 +199,7 @@ export default function About() {
           <div className="text-center mb-14">
             <span className="section-label">FAQ</span>
             <h2 className="section-heading mt-3">Frequently Asked Questions</h2>
-            <p className="text-eternita-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
+            <p className="text-kristals-gray mt-4 max-w-xl mx-auto text-sm md:text-base">
               Everything you need to know before your first visit to Kristal's.
             </p>
           </div>
@@ -199,20 +207,20 @@ export default function About() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-eternita-white rounded-xl border border-eternita-taupe/30 overflow-hidden transition-all"
+                className="bg-kristals-white rounded-xl border border-kristals-taupe/30 overflow-hidden transition-all"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex items-center justify-between p-5 text-left"
                 >
-                  <span className="font-medium text-sm md:text-base text-eternita-dark pr-4">{faq.q}</span>
+                  <span className="font-medium text-sm md:text-base text-kristals-dark pr-4">{faq.q}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={2}
                     stroke="currentColor"
-                    className={`w-5 h-5 text-eternita-teal shrink-0 transition-transform duration-200 ${
+                    className={`w-5 h-5 text-kristals-gold shrink-0 transition-transform duration-200 ${
                       openFaq === i ? 'rotate-180' : ''
                     }`}
                   >
@@ -220,7 +228,7 @@ export default function About() {
                   </svg>
                 </button>
                 {openFaq === i && (
-                  <div className="px-5 pb-5 text-sm text-eternita-gray leading-relaxed border-t border-eternita-taupe/20 pt-4">
+                  <div className="px-5 pb-5 text-sm text-kristals-gray leading-relaxed border-t border-kristals-taupe/20 pt-4">
                     {faq.a}
                   </div>
                 )}

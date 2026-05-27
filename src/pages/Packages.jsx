@@ -7,8 +7,8 @@ const packages = [
     name: 'Glow Starter',
     price: 1500,
     badge: 'BEST FOR FIRST-TIMERS',
-    badgeColor: 'bg-eternita-teal-light',
-    gradient: 'from-eternita-teal-light to-eternita-teal',
+    badgeColor: 'bg-kristals-gold-light',
+    gradient: 'from-kristals-gold-light to-kristals-gold',
     initials: 'GS',
     desc: 'The perfect introduction to professional skincare. This curated bundle pairs our most beloved facial treatments to give your skin a fresh start and a luminous, even-toned foundation.',
     items: [
@@ -23,8 +23,8 @@ const packages = [
     name: 'Radiance Boost',
     price: 1580,
     badge: 'BEST VALUE',
-    badgeColor: 'bg-eternita-coral-light',
-    gradient: 'from-eternita-coral-light to-eternita-coral',
+    badgeColor: 'bg-kristals-gold-light',
+    gradient: 'from-kristals-gold-light to-kristals-gold',
     initials: 'RB',
     desc: 'Triple-action brightening for dull, tired skin. Combining oxygen infusion, deep hydration, and LED light therapy, this package delivers a multi-dimensional glow that lasts.',
     items: [
@@ -40,7 +40,7 @@ const packages = [
     price: 1900,
     badge: null,
     badgeColor: '',
-    gradient: 'from-eternita-coral to-eternita-teal-dark',
+    gradient: 'from-kristals-gold to-kristals-gold-dark',
     initials: 'VP',
     desc: 'A three-month transformative journey designed for those who want it all. This VIP experience includes priority booking, a dedicated care coordinator, and a fully customized treatment schedule.',
     items: [
@@ -59,13 +59,21 @@ export default function Packages() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-eternita-teal-dark via-eternita-teal to-eternita-teal-light py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="section-label text-eternita-coral-light">Packages</span>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-eternita-white mt-3 mb-4">
+      <section className="relative overflow-hidden min-h-[50vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="/images/service-5.jpg"
+            alt="Kristal's Packages"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-kristals-dark/85 via-kristals-dark/75 to-kristals-gold-dark/65" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+          <span className="section-label text-kristals-gold-light">Packages</span>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-kristals-white mt-3 mb-4">
             Curated Journeys,<br />Exceptional Value
           </h1>
-          <p className="text-eternita-white/70 max-w-2xl mx-auto text-sm md:text-lg">
+          <p className="text-kristals-white/70 max-w-2xl mx-auto text-sm md:text-lg">
             Save more while experiencing more. Our packages bring together complementary treatments for transformative, lasting results.
           </p>
         </div>
@@ -78,14 +86,14 @@ export default function Packages() {
             {packages.map((pkg, index) => (
               <div
                 key={pkg.id}
-                className="bg-eternita-white rounded-2xl overflow-hidden border border-eternita-taupe/30 card-hover flex flex-col"
+                className="bg-kristals-white rounded-2xl overflow-hidden border border-kristals-taupe/30 card-hover flex flex-col"
               >
                 {/* Image */}
                 <div className="h-44 overflow-hidden relative">
                   <img src={`/images/package-${index + 1}.jpg`} alt={pkg.name} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   {pkg.badge && (
-                    <span className={`absolute top-4 left-4 ${pkg.badgeColor} text-eternita-dark text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase`}>
+                    <span className={`absolute top-4 left-4 ${pkg.badgeColor} text-kristals-dark text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase`}>
                       {pkg.badge}
                     </span>
                   )}
@@ -95,27 +103,27 @@ export default function Packages() {
                 </div>
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="font-serif text-xl font-bold text-eternita-dark">{pkg.name}</h3>
-                  <p className="text-eternita-gray text-sm mt-2 leading-relaxed">{pkg.desc}</p>
+                  <h3 className="font-serif text-xl font-bold text-kristals-dark">{pkg.name}</h3>
+                  <p className="text-kristals-gray text-sm mt-2 leading-relaxed">{pkg.desc}</p>
                   <ul className="mt-4 space-y-2 flex-1">
                     {pkg.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-eternita-dark/70">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-eternita-teal shrink-0 mt-0.5">
+                      <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-kristals-dark/70">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-kristals-gold shrink-0 mt-0.5">
                           <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                         </svg>
                         {item}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 pt-4 border-t border-eternita-taupe/30">
+                  <div className="mt-6 pt-4 border-t border-kristals-taupe/30">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-eternita-gray text-xs">Package price</span>
-                      <span className="font-serif text-2xl font-bold text-eternita-teal">${pkg.price.toLocaleString()}</span>
+                      <span className="text-kristals-gray text-xs">Package price</span>
+                      <span className="font-serif text-2xl font-bold text-kristals-gold">${pkg.price.toLocaleString()}</span>
                     </div>
                     <div className="flex gap-3">
                       <button
                         onClick={() => addToCart({ id: pkg.id, name: pkg.name, price: pkg.price, image: `/images/package-${index + 1}.jpg` })}
-                        className="flex-1 py-2.5 rounded-full border border-eternita-teal text-eternita-teal text-sm font-medium hover:bg-eternita-teal hover:text-white transition-all"
+                        className="flex-1 py-2.5 rounded-full border border-kristals-gold text-kristals-gold text-sm font-medium hover:bg-kristals-gold hover:text-white transition-all"
                       >
                         Add to Cart
                       </button>
@@ -132,12 +140,12 @@ export default function Packages() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 md:py-28 bg-eternita-light">
+      <section className="py-20 md:py-28 bg-kristals-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-dark mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-kristals-dark mb-4">
             Build Your Own Package
           </h2>
-          <p className="text-eternita-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
+          <p className="text-kristals-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
             Don't see exactly what you're looking for? We'll custom-design a package around your unique goals. Contact us for a personalized quote.
           </p>
           <Link to="/contact" className="btn-primary">

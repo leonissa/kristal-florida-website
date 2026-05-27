@@ -44,13 +44,21 @@ export default function Contact() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-eternita-teal-dark via-eternita-teal to-eternita-teal-light py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="section-label text-eternita-coral-light">Contact</span>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-eternita-white mt-3 mb-4">
+      <section className="relative overflow-hidden min-h-[50vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="/images/service-3.jpg"
+            alt="Kristal's Contact"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-kristals-dark/85 via-kristals-dark/75 to-kristals-gold-dark/65" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+          <span className="section-label text-kristals-gold-light">Contact</span>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-kristals-white mt-3 mb-4">
             Let's Begin Your<br />Wellness Journey
           </h1>
-          <p className="text-eternita-white/70 max-w-2xl mx-auto text-sm md:text-lg">
+          <p className="text-kristals-white/70 max-w-2xl mx-auto text-sm md:text-lg">
             Ready to experience Kristal's? Reach out to our team and take the first step toward a more radiant you.
           </p>
         </div>
@@ -61,14 +69,14 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactMethods.map((method) => (
-              <div key={method.label} className="bg-eternita-white rounded-2xl p-6 border border-eternita-taupe/30 card-hover">
-                <div className="w-12 h-12 rounded-xl bg-eternita-teal/10 flex items-center justify-center text-eternita-teal mb-4">
+              <div key={method.label} className="bg-kristals-white rounded-2xl p-6 border border-kristals-taupe/30 card-hover">
+                <div className="w-12 h-12 rounded-xl bg-kristals-gold/10 flex items-center justify-center text-kristals-gold mb-4">
                   {method.icon}
                 </div>
-                <h3 className="font-serif text-lg font-bold text-eternita-dark mb-2">{method.label}</h3>
+                <h3 className="font-serif text-lg font-bold text-kristals-dark mb-2">{method.label}</h3>
                 <ul className="space-y-1">
                   {method.details.map((d, i) => (
-                    <li key={i} className="text-sm text-eternita-gray">{d}</li>
+                    <li key={i} className="text-sm text-kristals-gray">{d}</li>
                   ))}
                 </ul>
               </div>
@@ -78,13 +86,13 @@ export default function Contact() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 md:py-20 bg-eternita-light">
+      <section className="py-16 md:py-20 bg-kristals-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-5 gap-12">
             {/* Form */}
             <div className="md:col-span-3">
               <span className="section-label">Get in Touch</span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-dark mt-3 mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-kristals-dark mt-3 mb-6">
                 Send Us a Message
               </h2>
               <form
@@ -93,53 +101,53 @@ export default function Contact() {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="firstName" className="block text-xs font-medium text-eternita-dark/70 mb-1.5 tracking-wide uppercase">First Name</label>
+                    <label htmlFor="firstName" className="block text-xs font-medium text-kristals-dark/70 mb-1.5 tracking-wide uppercase">First Name</label>
                     <input
                       id="firstName"
                       type="text"
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-white text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal transition-all placeholder:text-eternita-gray"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-white text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold transition-all placeholder:text-kristals-gray"
                       placeholder="Jane"
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-xs font-medium text-eternita-dark/70 mb-1.5 tracking-wide uppercase">Last Name</label>
+                    <label htmlFor="lastName" className="block text-xs font-medium text-kristals-dark/70 mb-1.5 tracking-wide uppercase">Last Name</label>
                     <input
                       id="lastName"
                       type="text"
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-white text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal transition-all placeholder:text-eternita-gray"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-white text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold transition-all placeholder:text-kristals-gray"
                       placeholder="Doe"
                     />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="email" className="block text-xs font-medium text-eternita-dark/70 mb-1.5 tracking-wide uppercase">Email</label>
+                    <label htmlFor="email" className="block text-xs font-medium text-kristals-dark/70 mb-1.5 tracking-wide uppercase">Email</label>
                     <input
                       id="email"
                       type="email"
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-white text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal transition-all placeholder:text-eternita-gray"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-white text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold transition-all placeholder:text-kristals-gray"
                       placeholder="jane@example.com"
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-xs font-medium text-eternita-dark/70 mb-1.5 tracking-wide uppercase">Phone</label>
+                    <label htmlFor="phone" className="block text-xs font-medium text-kristals-dark/70 mb-1.5 tracking-wide uppercase">Phone</label>
                     <input
                       id="phone"
                       type="tel"
-                      className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-white text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal transition-all placeholder:text-eternita-gray"
+                      className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-white text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold transition-all placeholder:text-kristals-gray"
                       placeholder="(786) 474-5829"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-xs font-medium text-eternita-dark/70 mb-1.5 tracking-wide uppercase">Subject</label>
+                  <label htmlFor="subject" className="block text-xs font-medium text-kristals-dark/70 mb-1.5 tracking-wide uppercase">Subject</label>
                   <select
                     id="subject"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-white text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal transition-all text-eternita-dark"
+                    className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-white text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold transition-all text-kristals-dark"
                   >
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
@@ -151,12 +159,12 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-xs font-medium text-eternita-dark/70 mb-1.5 tracking-wide uppercase">Message</label>
+                  <label htmlFor="message" className="block text-xs font-medium text-kristals-dark/70 mb-1.5 tracking-wide uppercase">Message</label>
                   <textarea
                     id="message"
                     rows={5}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-eternita-taupe/60 bg-eternita-white text-sm outline-none focus:ring-2 focus:ring-eternita-teal/30 focus:border-eternita-teal transition-all resize-none placeholder:text-eternita-gray"
+                    className="w-full px-4 py-3 rounded-xl border border-kristals-taupe/60 bg-kristals-white text-sm outline-none focus:ring-2 focus:ring-kristals-gold/30 focus:border-kristals-gold transition-all resize-none placeholder:text-kristals-gray"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
@@ -168,7 +176,7 @@ export default function Contact() {
 
             {/* Side info */}
             <div className="md:col-span-2">
-              <div className="bg-gradient-to-br from-eternita-teal to-eternita-teal-dark rounded-3xl p-8 text-eternita-white sticky top-28">
+              <div className="bg-gradient-to-br from-kristals-gold to-kristals-gold-dark rounded-3xl p-8 text-kristals-white sticky top-28">
                 <h3 className="font-serif text-xl font-bold mb-4">Why Choose Kristal's in Davie?</h3>
                 <ul className="space-y-4">
                   {[
@@ -179,7 +187,7 @@ export default function Contact() {
                     'A serene, spa-like environment in the heart of Davie',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-eternita-coral-light shrink-0 mt-0.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-kristals-gold-light shrink-0 mt-0.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                       </svg>
                       {item}
@@ -188,7 +196,7 @@ export default function Contact() {
                 </ul>
                 <div className="mt-8 pt-6 border-t border-white/20">
                   <p className="text-sm text-white/70 mb-2">Prefer to call?</p>
-                  <a href="tel:+17864745829" className="text-xl font-bold hover:text-eternita-coral-light transition-colors">
+                  <a href="tel:+17864745829" className="text-xl font-bold hover:text-kristals-gold-light transition-colors">
                     (786) 474-5829
                   </a>
                 </div>
@@ -201,10 +209,10 @@ export default function Contact() {
       {/* Bottom CTA */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-eternita-dark mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-kristals-dark mb-4">
             Ready to Book?
           </h2>
-          <p className="text-eternita-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
+          <p className="text-kristals-gray max-w-lg mx-auto mb-8 text-sm md:text-base">
             Skip the form and book your appointment directly. Our scheduling team will confirm within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
