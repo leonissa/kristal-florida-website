@@ -229,7 +229,7 @@ export default function Home() {
               {/* Image side */}
               <div className="h-64 md:h-auto overflow-hidden">
                 <img
-                  src="/images/about-story.jpg"
+                  src="/images/about-story.svg"
                   alt="Kristal's studio in Davie, FL"
                   className="w-full h-full object-cover"
                 />

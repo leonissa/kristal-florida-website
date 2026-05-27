@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#006d77"/>
+      <stop offset="100%" style="stop-color:#004d54"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <circle cx="100" cy="100" r="200" fill="#ffffff" opacity="0.08"/>
+  <circle cx="700" cy="500" r="150" fill="#ffffff" opacity="0.06"/>
+  <circle cx="400" cy="300" r="100" fill="#e29578" opacity="0.1"/>
+  <text x="400" y="280" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="#ffffff" text-anchor="middle">Kristal's</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="24" fill="#83c5be" text-anchor="middle">1 Seminole Way &#8226; Davie, FL</text>
+</svg>

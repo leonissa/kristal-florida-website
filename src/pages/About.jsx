@@ -125,7 +125,7 @@ export default function About() {
             </div>
             <div className="h-80 md:h-96 rounded-3xl overflow-hidden">
               <img
-                src="/images/about-story.jpg"
+                src="/images/about-story.svg"
                 alt="Kristal's story - Davie, FL"
                 className="w-full h-full object-cover"
               />
